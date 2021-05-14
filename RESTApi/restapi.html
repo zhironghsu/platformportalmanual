@@ -1,0 +1,1312 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>REST API Reference · Advantech Platform Portal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Advantech Co., Ltd.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="authentication.html" />
+    
+    
+    <link rel="prev" href="../control.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Advantech Platform Portal
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../Dashboard.html">
+            
+                <a href="../Dashboard.html">
+            
+                    
+                    Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../DiskMonitor.html">
+            
+                <a href="../DiskMonitor.html">
+            
+                    
+                    Disk Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../SystemDevices.html">
+            
+                <a href="../SystemDevices.html">
+            
+                    
+                    System Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../ProcessMonitor.html">
+            
+                <a href="../ProcessMonitor.html">
+            
+                    
+                    Process Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../networking/networking.html">
+            
+                <a href="../networking/networking.html">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../networking/interfaces.html">
+            
+                <a href="../networking/interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../networking/wifi.html">
+            
+                <a href="../networking/wifi.html">
+            
+                    
+                    Wi-Fi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../networking/routing.html">
+            
+                <a href="../networking/routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../TrapReceiver.html">
+            
+                <a href="../TrapReceiver.html">
+            
+                    
+                    Trap Receiver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../settings.html">
+            
+                <a href="../settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="../control.html">
+            
+                <a href="../control.html">
+            
+                    
+                    Remote control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="restapi.html">
+            
+                <a href="restapi.html">
+            
+                    
+                    REST API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="authentication.html">
+            
+                <a href="authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="authentication.html">
+            
+                <a href="authentication.html#post-authlogin">
+            
+                    
+                    POST /auth/login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="authentication.html">
+            
+                <a href="authentication.html#post-authlogout">
+            
+                    
+                    POST /auth/logout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="authentication.html">
+            
+                <a href="authentication.html#get-authcertificate">
+            
+                    
+                    GET /auth/certificate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="hwmon.html">
+            
+                <a href="hwmon.html#hw-monitor">
+            
+                    
+                    H/W Monitor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="hwmon.html">
+            
+                <a href="hwmon.html#get-platformapihwmon">
+            
+                    
+                    GET /platform/api/hwmon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="hwmon.html">
+            
+                <a href="hwmon.html#get-platformapihwmon-sse">
+            
+                    
+                    GET /platform/api/hwmon (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="hwmon.html">
+            
+                <a href="hwmon.html#get-platformapihwmontemperatures">
+            
+                    
+                    GET /platform/api/hwmon/temperatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#system-information">
+            
+                    
+                    System Information
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapihostinfo">
+            
+                    
+                    GET /platform/api/host/info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapisystemperf">
+            
+                    
+                    GET /platform/api/systemperf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapisystemperfcpu">
+            
+                    
+                    GET /platform/api/systemperf/cpu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapisystemperfmemory">
+            
+                    
+                    GET /platform/api/systemperf/memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="devmgr.html">
+            
+                <a href="devmgr.html#system-devices">
+            
+                    
+                    System Devices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="devmgr.html">
+            
+                <a href="devmgr.html#get-platformapidevmgr">
+            
+                    
+                    GET /platform/api/devmgr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="perif.html">
+            
+                <a href="perif.html#peripheral">
+            
+                    
+                    Peripheral
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifled">
+            
+                    
+                    GET /platform/api/perif/led
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifledid">
+            
+                    
+                    GET /platform/api/perif/led/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="perif.html">
+            
+                <a href="perif.html#put-platformapiperifledid">
+            
+                    
+                    PUT /platform/api/perif/led/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifwdt">
+            
+                    
+                    GET /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="perif.html">
+            
+                <a href="perif.html#put-platformapiperifwdt">
+            
+                    
+                    PUT /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="perif.html">
+            
+                <a href="perif.html#put-platformapiperifwdttimeout">
+            
+                    
+                    PUT /platform/api/perif/wdt/timeout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifdisk">
+            
+                    
+                    GET /platform/api/perif/disk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifdisk-sse">
+            
+                    
+                    GET /platform/api/perif/disk (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.9" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifdiskpartition">
+            
+                    
+                    GET /platform/api/perif/disk/partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.10" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifredundantpower">
+            
+                    
+                    GET /platform/api/perif/redundant_power
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.11" data-path="perif.html">
+            
+                <a href="perif.html#get-platformapiperifredundantpower-sse">
+            
+                    
+                    GET /platform/api/perif/redundant_power (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="networking.html">
+            
+                <a href="networking.html#networking">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="networking.html">
+            
+                <a href="networking.html#get-platformapinetworkinginterfaces">
+            
+                    
+                    GET /platform/api/networking/interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="networking.html">
+            
+                <a href="networking.html#get-platformapinetworkinginterfaces-sse">
+            
+                    
+                    GET /platform/api/networking/interfaces (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="networking.html">
+            
+                <a href="networking.html#post-platformapinetworkinginterfacesroute">
+            
+                    
+                    POST /platform/api/networking/interfaces/route
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="networking.html">
+            
+                <a href="networking.html#put-platformapinetworkingipv4configifindex">
+            
+                    
+                    PUT /platform/api/networking/ipv4config/:ifIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="networking.html">
+            
+                <a href="networking.html#delete-platformapinetworkingipv4configifindex">
+            
+                    
+                    DELETE /platform/api/networking/ipv4config/:ifIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="networking.html">
+            
+                <a href="networking.html#get-platformapinetworkingwifiinterfaces">
+            
+                    
+                    GET /platform/api/networking/wifi/interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="networking.html">
+            
+                <a href="networking.html#get-platformapinetworkingwifinetworksuuid">
+            
+                    
+                    GET /platform/api/networking/wifi/networks/:uuid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="networking.html">
+            
+                <a href="networking.html#delete-platformapinetworkingwifiinterfaceuuidprofilename">
+            
+                    
+                    DELETE /platform/api/networking/wifi/interface/:uuid/profile/:name
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="process.html">
+            
+                <a href="process.html#process-manager">
+            
+                    
+                    Process Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="process.html">
+            
+                <a href="process.html#get-platformapiprocesses">
+            
+                    
+                    GET /platform/api/processes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="process.html">
+            
+                <a href="process.html#get-platformapiprocesses-sse">
+            
+                    
+                    GET /platform/api/processes (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="process.html">
+            
+                <a href="process.html#delete-platformapiprocessespid">
+            
+                    
+                    DELETE /platform/api/processes/:pid
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="control.html">
+            
+                <a href="control.html#remote-control">
+            
+                    
+                    Remote Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="control.html">
+            
+                <a href="control.html#post-platformapicontrolreboot">
+            
+                    
+                    POST /platform/api/control/reboot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="control.html">
+            
+                <a href="control.html#post-platformapicontrolshutdown">
+            
+                    
+                    POST /platform/api/control/shutdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="events.html">
+            
+                <a href="events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="events.html">
+            
+                <a href="events.html#get-platformapievents-sse">
+            
+                    
+                    GET /platform/api/events (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="etp.html">
+            
+                <a href="etp.html">
+            
+                    
+                    ETP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="etp.html">
+            
+                <a href="etp.html#get-platformapietpdevicedata">
+            
+                    
+                    GET /platform/api/etp/devicedata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="etp.html">
+            
+                <a href="etp.html#get-platformapietpuserdata">
+            
+                    
+                    GET /platform/api/etp/userdata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="etp.html">
+            
+                <a href="etp.html#put-platformapietpuserdata">
+            
+                    
+                    PUT /platform/api/etp/userdata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="etp.html">
+            
+                <a href="etp.html#get-platformapietpuserdatalockstatus">
+            
+                    
+                    GET /platform/api/etp/userdata/lockstatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.5" data-path="etp.html">
+            
+                <a href="etp.html#put-platformapietpuserdatalockstatus">
+            
+                    
+                    PUT /platform/api/etp/userdata/lockstatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="bi.html">
+            
+                <a href="bi.html">
+            
+                    
+                    DeviceOn/BI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.11.1" data-path="bi.html">
+            
+                <a href="bi.html#get-biapimacaddr">
+            
+                    
+                    GET /bi/api/macaddr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.2" data-path="bi.html">
+            
+                <a href="bi.html#get-biapiconnection">
+            
+                    
+                    GET /bi/api/connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.3" data-path="bi.html">
+            
+                <a href="bi.html#post-biapiconnection">
+            
+                    
+                    POST /bi/api/connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.4" data-path="bi.html">
+            
+                <a href="bi.html#get-biapiconncfg">
+            
+                    
+                    GET /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.5" data-path="bi.html">
+            
+                <a href="bi.html#post-biapiconncfg">
+            
+                    
+                    POST /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.6" data-path="bi.html">
+            
+                <a href="bi.html#delete-biapiconncfg">
+            
+                    
+                    DELETE /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.7" data-path="bi.html">
+            
+                <a href="bi.html#get-biapiagentinfo">
+            
+                    
+                    GET /bi/api/agentinfo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../appendix.html">
+            
+                <a href="../appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../appendix.html">
+            
+                <a href="../appendix.html#server-sent-events-sse">
+            
+                    
+                    Server-Sent Events (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../appendix.html">
+            
+                <a href="../appendix.html#invoking-a-rest-api-via-postman">
+            
+                    
+                    Invoking a REST API via Postman
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../appendix.html">
+            
+                <a href="../appendix.html#prerequisite">
+            
+                    
+                    Prerequisite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../appendix.html">
+            
+                <a href="../appendix.html#calling-get-platformapihostinfo">
+            
+                    
+                    Calling GET /platform/api/host/info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../appendix.html">
+            
+                <a href="../appendix.html#calling-put-platformapiperifwdt">
+            
+                    
+                    Calling PUT /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >REST API Reference</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rest-api-reference">REST API Reference</h1>
+<p>All Platform Portal functionality is built on REST APIs that developers can call directly to access resources and control their devices programmatically.</p>
+<h2 id="see-also">See Also</h2>
+<ul>
+<li><p><a href="../appendix.html#invoking-a-rest-api-via-postman">Invoking a REST API via Postman</a></p>
+</li>
+<li><p><a href="../appendix.html#server-sent-events-sse">Server-Sent Events (SSE)</a></p>
+</li>
+</ul>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../control.html" class="navigation navigation-prev " aria-label="Previous page: Remote control">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="authentication.html" class="navigation navigation-next " aria-label="Next page: Authentication">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"REST API Reference","level":"1.2","depth":1,"next":{"title":"Authentication","level":"1.2.1","depth":2,"path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md","articles":[{"title":"POST /auth/login","level":"1.2.1.1","depth":3,"anchor":"#post-authlogin","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#post-authlogin","articles":[]},{"title":"POST /auth/logout","level":"1.2.1.2","depth":3,"anchor":"#post-authlogout","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#post-authlogout","articles":[]},{"title":"GET /auth/certificate","level":"1.2.1.3","depth":3,"anchor":"#get-authcertificate","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-authcertificate","articles":[]}]},"previous":{"title":"Remote control","level":"1.1.8","depth":2,"path":"control.md","ref":"control.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Platform Portal","gitbook":"*"},"file":{"path":"RESTApi/restapi.md","mtime":"2021-05-14T01:50:51.589Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-14T02:43:40.283Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
