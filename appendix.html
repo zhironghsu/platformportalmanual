@@ -60,7 +60,7 @@
     <link rel="next" href="appendix.html" />
     
     
-    <link rel="prev" href="RESTApi/bi.html" />
+    <link rel="prev" href="RESTApi/appwdt.html" />
     
 
     </head>
@@ -248,6 +248,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.1.9" data-path="appwdt.html">
+            
+                <a href="appwdt.html">
+            
+                    
+                    Application Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -371,6 +384,45 @@
             
                     
                     GET /platform/api/hwmon/temperatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="RESTApi/hwmon.html">
+            
+                <a href="RESTApi/hwmon.html#get-platformapihwmonvoltages">
+            
+                    
+                    GET /platform/api/hwmon/voltages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="RESTApi/hwmon.html">
+            
+                <a href="RESTApi/hwmon.html#get-platformapihwmoncurrents">
+            
+                    
+                    GET /platform/api/hwmon/currents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="RESTApi/hwmon.html">
+            
+                <a href="RESTApi/hwmon.html#get-platformapihwmonfanspeeds">
+            
+                    
+                    GET /platform/api/hwmon/fanspeeds
             
                 </a>
             
@@ -1100,6 +1152,90 @@
             
         </li>
     
+        <li class="chapter " data-level="1.2.12" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html">
+            
+                    
+                    Application Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.12.1" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html#get-platformapiappwdt">
+            
+                    
+                    GET /platform/api/appwdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.2" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html#post-platformapiappwdtapp">
+            
+                    
+                    POST /platform/api/appwdt/App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.3" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html#get-platformapiappwdtapp">
+            
+                    
+                    DELETE /platform/api/appwdt/App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.4" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html#delete-platformapiappwdtapplist">
+            
+                    
+                    GET /platform/api/appwdt/APPList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.5" data-path="RESTApi/appwdt.html">
+            
+                <a href="RESTApi/appwdt.html#get-platformapiappwdtapplistbynameid">
+            
+                    
+                    GET /platform/api/appwdt/AppListByName/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
 
             </ul>
             
@@ -1271,7 +1407,7 @@ evtSource.addEventListener(<span class="xml"><span class="hljs-tag">&lt;<span cl
 <ol>
 <li><p>Switch to <strong>Authorization</strong> Tab and set <code>TYPE</code> <strong>to Bearer Token</strong></p>
 </li>
-<li><p>Input the <code>token</code> from <a href="#Prerequisite">Prerequisite</a> <strong>Step 2</strong></p>
+<li><p>Input the <code>token</code> from <a href="#prerequisite">Prerequisite</a> <strong>Step 2</strong></p>
 </li>
 <li><p><strong>Send</strong> the Request</p>
 <p><img src="assets/postman_hostinfo.png" alt="Postman Get Hostinfo"></p>
@@ -1284,7 +1420,7 @@ evtSource.addEventListener(<span class="xml"><span class="hljs-tag">&lt;<span cl
 <ol>
 <li><p>Switch to <strong>Authorization</strong> Tab and set <code>TYPE</code> <strong>to Bearer Token</strong></p>
 </li>
-<li><p>Input the <code>token</code> from <a href="#Prerequisite">Prerequisite</a> <strong>Step 2</strong></p>
+<li><p>Input the <code>token</code> from <a href="#prerequisite">Prerequisite</a> <strong>Step 2</strong></p>
 <p><img src="assets/postman_wdtauth.png" alt="Postman Put WDT AUTH"></p>
 </li>
 <li><p>Switch to <strong>Body</strong> Tab, select <code>raw</code>, <code>JSON</code>, and input the request body</p>
@@ -1311,7 +1447,7 @@ evtSource.addEventListener(<span class="xml"><span class="hljs-tag">&lt;<span cl
 
             
                 
-                <a href="RESTApi/bi.html#get-biapiagentinfo" class="navigation navigation-prev " aria-label="Previous page: GET /bi/api/agentinfo">
+                <a href="RESTApi/appwdt.html#get-platformapiappwdtapplistbynameid" class="navigation navigation-prev " aria-label="Previous page: GET /platform/api/appwdt/AppListByName/:id">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
@@ -1327,7 +1463,7 @@ evtSource.addEventListener(<span class="xml"><span class="hljs-tag">&lt;<span cl
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Appendix","level":"1.3","depth":1,"next":{"title":"Server-Sent Events (SSE)","level":"1.3.1","depth":2,"anchor":"#server-sent-events-sse","path":"appendix.md","ref":"appendix.md#server-sent-events-sse","articles":[]},"previous":{"title":"GET /bi/api/agentinfo","level":"1.2.11.7","depth":3,"anchor":"#get-biapiagentinfo","path":"RESTApi/bi.md","ref":"RESTApi/bi.md#get-biapiagentinfo","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Platform Portal","gitbook":"*"},"file":{"path":"appendix.md","mtime":"2021-05-14T01:53:09.179Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-24T01:23:22.790Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Appendix","level":"1.3","depth":1,"next":{"title":"Server-Sent Events (SSE)","level":"1.3.1","depth":2,"anchor":"#server-sent-events-sse","path":"appendix.md","ref":"appendix.md#server-sent-events-sse","articles":[]},"previous":{"title":"GET /platform/api/appwdt/AppListByName/:id","level":"1.2.12.5","depth":3,"anchor":"#get-platformapiappwdtapplistbynameid","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapplistbynameid","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Platform Portal","gitbook":"*"},"file":{"path":"appendix.md","mtime":"2021-06-16T02:32:56.025Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-16T06:46:28.360Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
