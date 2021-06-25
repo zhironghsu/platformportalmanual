@@ -1,0 +1,1677 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Modbus (Downlink) · Advantech Platform Portal</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Advantech Co., Ltd.">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="azure.html" />
+    
+    
+    <link rel="prev" href="../EdgeX.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Advantech Platform Portal
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="../Dashboard.html">
+            
+                <a href="../Dashboard.html">
+            
+                    
+                    Dashboard
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../DiskMonitor.html">
+            
+                <a href="../DiskMonitor.html">
+            
+                    
+                    Disk Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../SystemDevices.html">
+            
+                <a href="../SystemDevices.html">
+            
+                    
+                    System Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../ProcessMonitor.html">
+            
+                <a href="../ProcessMonitor.html">
+            
+                    
+                    Process Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../networking/networking.html">
+            
+                <a href="../networking/networking.html">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../networking/interfaces.html">
+            
+                <a href="../networking/interfaces.html">
+            
+                    
+                    Interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../networking/wifi.html">
+            
+                <a href="../networking/wifi.html">
+            
+                    
+                    Wi-Fi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../networking/routing.html">
+            
+                <a href="../networking/routing.html">
+            
+                    
+                    Routing
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" data-path="../TrapReceiver.html">
+            
+                <a href="../TrapReceiver.html">
+            
+                    
+                    Trap Receiver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../EdgeX.html">
+            
+                <a href="../EdgeX.html">
+            
+                    
+                    EdgeX
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.7.1" data-path="modbus.html">
+            
+                <a href="modbus.html">
+            
+                    
+                    Modbus (Downlink)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7.2" data-path="azure.html">
+            
+                <a href="azure.html">
+            
+                    
+                    EdgeX to Azure IoT Hub (Uplink)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7.3" data-path="aws.html">
+            
+                <a href="aws.html">
+            
+                    
+                    EdgeX to AWS IoT Core (Uplink)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="../settings.html">
+            
+                <a href="../settings.html">
+            
+                    
+                    Settings
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="../control.html">
+            
+                <a href="../control.html">
+            
+                    
+                    Remote control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="../appwdt.html">
+            
+                <a href="../appwdt.html">
+            
+                    
+                    Application Monitor
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../RESTApi/restapi.html">
+            
+                <a href="../RESTApi/restapi.html">
+            
+                    
+                    REST API Reference
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../RESTApi/authentication.html">
+            
+                <a href="../RESTApi/authentication.html">
+            
+                    
+                    Authentication
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../RESTApi/authentication.html">
+            
+                <a href="../RESTApi/authentication.html#post-authlogin">
+            
+                    
+                    POST /auth/login
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../RESTApi/authentication.html">
+            
+                <a href="../RESTApi/authentication.html#post-authlogout">
+            
+                    
+                    POST /auth/logout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../RESTApi/authentication.html">
+            
+                <a href="../RESTApi/authentication.html#get-authcertificate">
+            
+                    
+                    GET /auth/certificate
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#hw-monitor">
+            
+                    
+                    H/W Monitor
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmon">
+            
+                    
+                    GET /platform/api/hwmon
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmon-sse">
+            
+                    
+                    GET /platform/api/hwmon (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmontemperatures">
+            
+                    
+                    GET /platform/api/hwmon/temperatures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmonvoltages">
+            
+                    
+                    GET /platform/api/hwmon/voltages
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmoncurrents">
+            
+                    
+                    GET /platform/api/hwmon/currents
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" data-path="../RESTApi/hwmon.html">
+            
+                <a href="../RESTApi/hwmon.html#get-platformapihwmonfanspeeds">
+            
+                    
+                    GET /platform/api/hwmon/fanspeeds
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../RESTApi/systeminfo.html">
+            
+                <a href="../RESTApi/systeminfo.html#system-information">
+            
+                    
+                    System Information
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.3.1" data-path="../RESTApi/systeminfo.html">
+            
+                <a href="../RESTApi/systeminfo.html#get-platformapihostinfo">
+            
+                    
+                    GET /platform/api/host/info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.2" data-path="../RESTApi/systeminfo.html">
+            
+                <a href="../RESTApi/systeminfo.html#get-platformapisystemperf">
+            
+                    
+                    GET /platform/api/systemperf
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.3" data-path="../RESTApi/systeminfo.html">
+            
+                <a href="../RESTApi/systeminfo.html#get-platformapisystemperfcpu">
+            
+                    
+                    GET /platform/api/systemperf/cpu
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3.4" data-path="../RESTApi/systeminfo.html">
+            
+                <a href="../RESTApi/systeminfo.html#get-platformapisystemperfmemory">
+            
+                    
+                    GET /platform/api/systemperf/memory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../RESTApi/devmgr.html">
+            
+                <a href="../RESTApi/devmgr.html#system-devices">
+            
+                    
+                    System Devices
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.4.1" data-path="../RESTApi/devmgr.html">
+            
+                <a href="../RESTApi/devmgr.html#get-platformapidevmgr">
+            
+                    
+                    GET /platform/api/devmgr
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#peripheral">
+            
+                    
+                    Peripheral
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.5.1" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifled">
+            
+                    
+                    GET /platform/api/perif/led
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.2" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifledid">
+            
+                    
+                    GET /platform/api/perif/led/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.3" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#put-platformapiperifledid">
+            
+                    
+                    PUT /platform/api/perif/led/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.4" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifwdt">
+            
+                    
+                    GET /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.5" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#put-platformapiperifwdt">
+            
+                    
+                    PUT /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.6" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#put-platformapiperifwdttimeout">
+            
+                    
+                    PUT /platform/api/perif/wdt/timeout
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.7" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifdisk">
+            
+                    
+                    GET /platform/api/perif/disk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.8" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifdisk-sse">
+            
+                    
+                    GET /platform/api/perif/disk (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.9" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifdiskpartition">
+            
+                    
+                    GET /platform/api/perif/disk/partition
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.10" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifredundantpower">
+            
+                    
+                    GET /platform/api/perif/redundant_power
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5.11" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifredundantpower-sse">
+            
+                    
+                    GET /platform/api/perif/redundant_power (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#networking">
+            
+                    
+                    Networking
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.6.1" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#get-platformapinetworkinginterfaces">
+            
+                    
+                    GET /platform/api/networking/interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.2" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#get-platformapinetworkinginterfaces-sse">
+            
+                    
+                    GET /platform/api/networking/interfaces (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.3" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#post-platformapinetworkinginterfacesroute">
+            
+                    
+                    POST /platform/api/networking/interfaces/route
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.4" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#put-platformapinetworkingipv4configifindex">
+            
+                    
+                    PUT /platform/api/networking/ipv4config/:ifIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.5" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#delete-platformapinetworkingipv4configifindex">
+            
+                    
+                    DELETE /platform/api/networking/ipv4config/:ifIndex
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.6" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#get-platformapinetworkingwifiinterfaces">
+            
+                    
+                    GET /platform/api/networking/wifi/interfaces
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.7" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#get-platformapinetworkingwifinetworksuuid">
+            
+                    
+                    GET /platform/api/networking/wifi/networks/:uuid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6.8" data-path="../RESTApi/networking.html">
+            
+                <a href="../RESTApi/networking.html#delete-platformapinetworkingwifiinterfaceuuidprofilename">
+            
+                    
+                    DELETE /platform/api/networking/wifi/interface/:uuid/profile/:name
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../RESTApi/process.html">
+            
+                <a href="../RESTApi/process.html#process-manager">
+            
+                    
+                    Process Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.7.1" data-path="../RESTApi/process.html">
+            
+                <a href="../RESTApi/process.html#get-platformapiprocesses">
+            
+                    
+                    GET /platform/api/processes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.2" data-path="../RESTApi/process.html">
+            
+                <a href="../RESTApi/process.html#get-platformapiprocesses-sse">
+            
+                    
+                    GET /platform/api/processes (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7.3" data-path="../RESTApi/process.html">
+            
+                <a href="../RESTApi/process.html#delete-platformapiprocessespid">
+            
+                    
+                    DELETE /platform/api/processes/:pid
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../RESTApi/control.html">
+            
+                <a href="../RESTApi/control.html#remote-control">
+            
+                    
+                    Remote Control
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.8.1" data-path="../RESTApi/control.html">
+            
+                <a href="../RESTApi/control.html#post-platformapicontrolreboot">
+            
+                    
+                    POST /platform/api/control/reboot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8.2" data-path="../RESTApi/control.html">
+            
+                <a href="../RESTApi/control.html#post-platformapicontrolshutdown">
+            
+                    
+                    POST /platform/api/control/shutdown
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../RESTApi/events.html">
+            
+                <a href="../RESTApi/events.html">
+            
+                    
+                    Events
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.9.1" data-path="../RESTApi/events.html">
+            
+                <a href="../RESTApi/events.html#get-platformapievents-sse">
+            
+                    
+                    GET /platform/api/events (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html">
+            
+                    
+                    ETP
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.10.1" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html#get-platformapietpdevicedata">
+            
+                    
+                    GET /platform/api/etp/devicedata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.2" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html#get-platformapietpuserdata">
+            
+                    
+                    GET /platform/api/etp/userdata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.3" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html#put-platformapietpuserdata">
+            
+                    
+                    PUT /platform/api/etp/userdata
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.4" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html#get-platformapietpuserdatalockstatus">
+            
+                    
+                    GET /platform/api/etp/userdata/lockstatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10.5" data-path="../RESTApi/etp.html">
+            
+                <a href="../RESTApi/etp.html#put-platformapietpuserdatalockstatus">
+            
+                    
+                    PUT /platform/api/etp/userdata/lockstatus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html">
+            
+                    
+                    DeviceOn/BI
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.11.1" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#get-biapimacaddr">
+            
+                    
+                    GET /bi/api/macaddr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.2" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#get-biapiconnection">
+            
+                    
+                    GET /bi/api/connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.3" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#post-biapiconnection">
+            
+                    
+                    POST /bi/api/connection
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.4" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#get-biapiconncfg">
+            
+                    
+                    GET /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.5" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#post-biapiconncfg">
+            
+                    
+                    POST /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.6" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#delete-biapiconncfg">
+            
+                    
+                    DELETE /bi/api/conncfg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11.7" data-path="../RESTApi/bi.html">
+            
+                <a href="../RESTApi/bi.html#get-biapiagentinfo">
+            
+                    
+                    GET /bi/api/agentinfo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html">
+            
+                    
+                    Application Manager
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.12.1" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html#get-platformapiappwdt">
+            
+                    
+                    GET /platform/api/appwdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.2" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html#post-platformapiappwdtapp">
+            
+                    
+                    POST /platform/api/appwdt/App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.3" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html#get-platformapiappwdtapp">
+            
+                    
+                    DELETE /platform/api/appwdt/App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.4" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html#delete-platformapiappwdtapplist">
+            
+                    
+                    GET /platform/api/appwdt/APPList
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12.5" data-path="../RESTApi/appwdt.html">
+            
+                <a href="../RESTApi/appwdt.html#get-platformapiappwdtapplistbynameid">
+            
+                    
+                    GET /platform/api/appwdt/AppListByName/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../appendix.html">
+            
+                <a href="../appendix.html">
+            
+                    
+                    Appendix
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../appendix.html">
+            
+                <a href="../appendix.html#server-sent-events-sse">
+            
+                    
+                    Server-Sent Events (SSE)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../appendix.html">
+            
+                <a href="../appendix.html#invoking-a-rest-api-via-postman">
+            
+                    
+                    Invoking a REST API via Postman
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.2.1" data-path="../appendix.html">
+            
+                <a href="../appendix.html#prerequisite">
+            
+                    
+                    Prerequisite
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.2" data-path="../appendix.html">
+            
+                <a href="../appendix.html#calling-get-platformapihostinfo">
+            
+                    
+                    Calling GET /platform/api/host/info
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2.3" data-path="../appendix.html">
+            
+                <a href="../appendix.html#calling-put-platformapiperifwdt">
+            
+                    
+                    Calling PUT /platform/api/perif/wdt
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Modbus (Downlink)</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="modbus">Modbus</h1>
+<h2 id="modbus-device-simulator">Modbus Device (Simulator)</h2>
+<p>Download <a href="http://modbuspal.sourceforge.net/" target="_blank">ModbusPal</a>.</p>
+<p>To simulate sensors, such as temperature, voltage, and humidity, do the following:</p>
+<ol>
+<li><p>Add a mock device</p>
+<p> <img src="../assets/addmockdevices.png" alt="mock device"></p>
+</li>
+<li><p>Add holding registers</p>
+<p> <img src="../assets/AddHoldingRegs.png" alt="holding registers"></p>
+</li>
+<li><p>The ModbusPal support value auto-generator, which can bind to registers</p>
+<p> <img src="../assets/AddAutomations.png" alt="Automations"></p>
+<p> <img src="../assets/AddAutomationsDetails.png" alt="Automations"></p>
+</li>
+<li><p>Bind the auto-generator values to registers</p>
+<p> <img src="../assets/BindValues.png" alt="BindValues"></p>
+<p> <img src="../assets/BindValuesResult.png" alt="BindValuesResult"></p>
+</li>
+<li><p>Run the simulator and the value auto-generator</p>
+<p> <img src="../assets/RunSimulator.png" alt="RunSimulator"></p>
+</li>
+</ol>
+<h2 id="create-a-device-profile">Create a Device profile</h2>
+<p>Create the device profile, as shown below:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">&quot;Network Power Meter&quot;</span>
+<span class="hljs-attr">manufacturer:</span> <span class="hljs-string">&quot;Simulator&quot;</span>
+<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;SIM01&quot;</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Power Scout Meter&quot;</span>
+<span class="hljs-attr">labels:</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;modbus&quot;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;powerscout&quot;</span>
+<span class="hljs-attr">deviceResources:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Current&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Average current of all phases&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;9&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;FLOAT32&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;min&quot;</span>}
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Energy&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;System Total True Energy&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;4001&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;FLOAT32&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;min&quot;</span>}
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Power&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;System Total True Power &quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;4003&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;UINT16&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;min&quot;</span>}
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Voltage&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Voltage Line to line (Volts) Average&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;4017&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;UINT16&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;min&quot;</span>}
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;DemandWindowSize&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Demand window size in minutes; default is 15 min&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;4603&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;UINT16&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;min&quot;</span>}
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;LineFrequency&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Line frequency setting for metering: 50=50 Hz, 60=60Hz&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { primaryTable: <span class="hljs-string">&quot;HOLDING_REGISTERS&quot;</span>, startingAddress: <span class="hljs-string">&quot;4609&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+<span class="hljs-attr">      value:</span>
+        { type: <span class="hljs-string">&quot;UINT16&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, scale: <span class="hljs-string">&quot;1&quot;</span>}
+<span class="hljs-attr">      units:</span>
+        { type: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span>, defaultValue: <span class="hljs-string">&quot;Hz&quot;</span>}
+<span class="hljs-attr">deviceCommands:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Current&quot;</span>
+<span class="hljs-attr">    get:</span>
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;1&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;Current&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Values&quot;</span>
+<span class="hljs-attr">    get:</span>
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;1&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;Energy&quot;</span> }
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;2&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;Power&quot;</span> }
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;3&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;Voltage&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Configuration&quot;</span>
+<span class="hljs-attr">    set:</span>
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;1&quot;</span>, operation: <span class="hljs-string">&quot;set&quot;</span>, deviceResource: <span class="hljs-string">&quot;DemandWindowSize&quot;</span> }
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;2&quot;</span>, operation: <span class="hljs-string">&quot;set&quot;</span>, deviceResource: <span class="hljs-string">&quot;LineFrequency&quot;</span> }
+<span class="hljs-attr">    get:</span>
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;1&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;DemandWindowSize&quot;</span> }
+<span class="hljs-bullet">      -</span> { index: <span class="hljs-string">&quot;2&quot;</span>, operation: <span class="hljs-string">&quot;get&quot;</span>, deviceResource: <span class="hljs-string">&quot;LineFrequency&quot;</span> }
+<span class="hljs-attr">coreCommands:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Current&quot;</span>
+<span class="hljs-attr">    get:</span>
+<span class="hljs-attr">      path:</span> <span class="hljs-string">&quot;/api/v1/device/{deviceId}/Current&quot;</span>
+<span class="hljs-attr">      responses:</span>
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;200&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;Get the Current&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> [<span class="hljs-string">&quot;Current&quot;</span>]
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;500&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;internal server error&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> []
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Values&quot;</span>
+<span class="hljs-attr">    get:</span>
+<span class="hljs-attr">      path:</span> <span class="hljs-string">&quot;/api/v1/device/{deviceId}/Values&quot;</span>
+<span class="hljs-attr">      responses:</span>
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;200&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;Get the Values&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> [<span class="hljs-string">&quot;Energy&quot;</span>,<span class="hljs-string">&quot;Power&quot;</span>,<span class="hljs-string">&quot;Voltage&quot;</span>]
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;500&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;internal server error&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> []
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Configuration&quot;</span>
+<span class="hljs-attr">    get:</span>
+<span class="hljs-attr">      path:</span> <span class="hljs-string">&quot;/api/v1/device/{deviceId}/Configuration&quot;</span>
+<span class="hljs-attr">      responses:</span>
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;200&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;Get the Configuration&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> [<span class="hljs-string">&quot;DemandWindowSize&quot;</span>,<span class="hljs-string">&quot;LineFrequency&quot;</span>]
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;500&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;internal server error&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> []
+<span class="hljs-attr">    put:</span>
+<span class="hljs-attr">      path:</span> <span class="hljs-string">&quot;/api/v1/device/{deviceId}/Configuration&quot;</span>
+<span class="hljs-attr">      parameterNames:</span> [<span class="hljs-string">&quot;DemandWindowSize&quot;</span>,<span class="hljs-string">&quot;LineFrequency&quot;</span>]
+<span class="hljs-attr">      responses:</span>
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;204&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;Set the Configuration&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> []
+<span class="hljs-bullet">        -</span>
+<span class="hljs-attr">          code:</span> <span class="hljs-string">&quot;500&quot;</span>
+<span class="hljs-attr">          description:</span> <span class="hljs-string">&quot;internal server error&quot;</span>
+<span class="hljs-attr">          expectedValues:</span> []
+</code></pre>
+<h2 id="add-a-downlink-device">Add a downlink device</h2>
+<ol>
+<li><p>Navigate to <strong>EdgeX &gt; Downlink</strong>, then click the <strong>&#xFF0B;</strong> button.</p>
+<p> <img src="../assets/Downlink.png" alt="Downlink"></p>
+</li>
+<li><p>Upload device profile and fill the device information.</p>
+<p> <img src="../assets/NewDeviceModbusTCP.png" alt="NewDeviceModbusTCP"></p>
+</li>
+<li><p>Add AutoEvent</p>
+<p>The EdgeX device service will polling the device value based on your configuration.
+<img src="../assets/AutoEvent.png" alt="AutoEvent"></p>
+</li>
+<li><p>Click <strong>SAVE</strong> to save the device configuration</p>
+</li>
+</ol>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../EdgeX.html" class="navigation navigation-prev " aria-label="Previous page: EdgeX">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="azure.html" class="navigation navigation-next " aria-label="Next page: EdgeX to Azure IoT Hub (Uplink)">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Modbus (Downlink)","level":"1.1.7.1","depth":3,"next":{"title":"EdgeX to Azure IoT Hub (Uplink)","level":"1.1.7.2","depth":3,"path":"EdgeX/azure.md","ref":"EdgeX/azure.md","articles":[]},"previous":{"title":"EdgeX","level":"1.1.7","depth":2,"path":"EdgeX.md","ref":"EdgeX.md","articles":[{"title":"Modbus (Downlink)","level":"1.1.7.1","depth":3,"path":"EdgeX/modbus.md","ref":"EdgeX/modbus.md","articles":[]},{"title":"EdgeX to Azure IoT Hub (Uplink)","level":"1.1.7.2","depth":3,"path":"EdgeX/azure.md","ref":"EdgeX/azure.md","articles":[]},{"title":"EdgeX to AWS IoT Core (Uplink)","level":"1.1.7.3","depth":3,"path":"EdgeX/aws.md","ref":"EdgeX/aws.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Platform Portal","gitbook":"*"},"file":{"path":"EdgeX/modbus.md","mtime":"2021-06-25T01:14:04.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-25T02:55:45.872Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
