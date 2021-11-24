@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Routing · Advantech Edge Suite</title>
+        <title>SNMP (Downlink) · Advantech Edge Suite</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../TrapReceiver.html" />
+    <link rel="next" href="opcua.html" />
     
     
-    <link rel="prev" href="wifi.html" />
+    <link rel="prev" href="modbus.html" />
     
 
     </head>
@@ -164,9 +164,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="networking.html">
+        <li class="chapter " data-level="1.2.5" data-path="../networking/networking.html">
             
-                <a href="networking.html">
+                <a href="../networking/networking.html">
             
                     
                     Networking
@@ -178,9 +178,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.5.1" data-path="interfaces.html">
+        <li class="chapter " data-level="1.2.5.1" data-path="../networking/interfaces.html">
             
-                <a href="interfaces.html">
+                <a href="../networking/interfaces.html">
             
                     
                     Interfaces
@@ -191,9 +191,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5.2" data-path="wifi.html">
+        <li class="chapter " data-level="1.2.5.2" data-path="../networking/wifi.html">
             
-                <a href="wifi.html">
+                <a href="../networking/wifi.html">
             
                     
                     Wi-Fi
@@ -204,9 +204,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5.3" data-path="routing.html">
+        <li class="chapter " data-level="1.2.5.3" data-path="../networking/routing.html">
             
-                <a href="routing.html">
+                <a href="../networking/routing.html">
             
                     
                     Routing
@@ -249,9 +249,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.7.1" data-path="../EdgeX/modbus.html">
+        <li class="chapter " data-level="1.2.7.1" data-path="modbus.html">
             
-                <a href="../EdgeX/modbus.html">
+                <a href="modbus.html">
             
                     
                     Modbus (Downlink)
@@ -262,9 +262,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.2" data-path="../EdgeX/snmp.html">
+        <li class="chapter active" data-level="1.2.7.2" data-path="snmp.html">
             
-                <a href="../EdgeX/snmp.html">
+                <a href="snmp.html">
             
                     
                     SNMP (Downlink)
@@ -275,9 +275,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.3" data-path="../EdgeX/opcua.html">
+        <li class="chapter " data-level="1.2.7.3" data-path="opcua.html">
             
-                <a href="../EdgeX/opcua.html">
+                <a href="opcua.html">
             
                     
                     OPCUA (Downlink)
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.4" data-path="../EdgeX/azure.html">
+        <li class="chapter " data-level="1.2.7.4" data-path="azure.html">
             
-                <a href="../EdgeX/azure.html">
+                <a href="azure.html">
             
                     
                     EdgeX to Azure IoT Hub (Uplink)
@@ -301,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.5" data-path="../EdgeX/aws.html">
+        <li class="chapter " data-level="1.2.7.5" data-path="aws.html">
             
-                <a href="../EdgeX/aws.html">
+                <a href="aws.html">
             
                     
                     EdgeX to AWS IoT Core (Uplink)
@@ -1542,7 +1542,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Routing</a>
+        <a href=".." >SNMP (Downlink)</a>
     </h1>
 </div>
 
@@ -1554,12 +1554,293 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="interface-routing">Interface Routing</h1>
-<p>The Interface Routing provides an overview of the <strong>Interface Metrics</strong>, you can click the <strong>EDIT</strong> button to change the sequence of network interface route.</p>
-<p><img src="../assets/networking_routing.png" alt="Interfaces Routing"></p>
-<h2 id="edit-interface-route">Edit Interface Route</h2>
-<p>You can <strong>drag and drop</strong> the interface handle to change the interface priority (metric) and then click the <strong>SAVE</strong> button to save the changes.</p>
-<p><img src="../assets/networking_routing_drag.png" alt="Interfaces Routing Drag"></p>
+                                <h1 id="snmp">SNMP</h1>
+<p>This page describes how to connect SNMP devices to EdgeX. In this example, we take <a href="https://oidref.com/1.3.6.1.2.1.1" target="_blank">SNMP MIB-2 System (1.3.6.1.2.1.1)</a> object to test the SNMP device service features.</p>
+<h2 id="snmp-mib-2-system-1361211">SNMP MIB-2 System (1.3.6.1.2.1.1)</h2>
+<table>
+<thead>
+<tr>
+<th>OID</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.3.6.1.2.1.1.1</td>
+<td>sysDescr</td>
+<td>A textual description of the entity.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.2</td>
+<td>sysObjectID</td>
+<td>The standard identification of the managed system this agent represents.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.3</td>
+<td>sysUpTime</td>
+<td>The time (in hundredths of a second) since the network management portion of the system was last re-initialized.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.4</td>
+<td>sysContact</td>
+<td>The textual identification of the contact person for this managed node.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.5</td>
+<td>sysName</td>
+<td>An administratively-assigned name for this managed node. By convention, this is the node&apos;s fully-qualified domain name.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.6</td>
+<td>sysLocation</td>
+<td>The physical location of this node.</td>
+</tr>
+<tr>
+<td>1.3.6.1.2.1.1.7</td>
+<td>sysServices</td>
+<td>A value which indicates the set of services that this entity primarily offers.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="device-profile">Device Profile</h2>
+<p>Create the device profile (YAML) and save it as <strong>snmp_mib2_system.yaml</strong>, as shown below:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">&quot;snmp_mib2_system&quot;</span>
+<span class="hljs-attr">manufacturer:</span> <span class="hljs-string">&quot;Advantech corp&quot;</span>
+<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;SNMP-MIB2-SYSTEM&quot;</span>
+<span class="hljs-attr">labels:</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;advantech&quot;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;SNMP&quot;</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;SNMP MIB-2 System&quot;</span>
+
+<span class="hljs-attr">deviceResources:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysDescr
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;A textual description of the entity.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.1.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysObjectID
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The vendor&apos;s authoritative identification of the network management subsystem contained in the entity.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.2.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysUpTime
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The time (in hundredths of a second) since the network management portion of the system was last re-initialized.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.3.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Int32&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysContact
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The textual identification of the contact person for this managed node, together with information on how to contact this person.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.4.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> Set-sysContact
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The textual identification of the contact person for this managed node, together with information on how to contact this person.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.4.0&quot;</span>, community: <span class="hljs-string">&quot;private&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;W&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysName
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;An administratively-assigned name for this managed node. By convention, this is the node&apos;s fully-qualified domain name.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.5.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> Set-sysName
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;An administratively-assigned name for this managed node. By convention, this is the node&apos;s fully-qualified domain name.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.5.0&quot;</span>, community: <span class="hljs-string">&quot;private&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;W&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysLocation
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The physical location of this node.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.6.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> Set-sysLocation
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;The physical location of this node.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.6.0&quot;</span>, community: <span class="hljs-string">&quot;private&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;W&quot;</span> }
+
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> sysServices
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;A value which indicates the set of services that this entity primarily offers.&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.1.7.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+</code></pre>
+<p>In the SNMP protocol, EdgeX provide the following attributes:</p>
+<p>1.<code>oid</code>: The SNMP OID end with <strong>.0</strong> if the target oid is not a table entry. for example, sysDescr.<strong>0</strong> (1.3.6.1.2.1.1.1.<strong>0</strong>); if the target oid is a table entry oid, for example, <code>ifIndex</code> (1.3.6.1.2.1.2.2.1.1), you don&apos;t need to give the ending <strong>.0</strong>.
+2.<code>community</code>: The SNMP community.</p>
+<ol>
+<li><code>isTableEntry</code>: Indicates the oid is a table entry oid, it will returns an array containing all the values. Default is <code>false</code>.</li>
+<li><code>dataType</code> The SNMP service will process the OCTET STRING (data bytes) into the corresponding data type. If the <code>dataType</code> is not specified, the SNMP service will determine the data bytes, if the data contains any non-printable bytes, the SNMP service will return an hexadecimal encoding string. For example: 00 01 02 (Hex).</li>
+</ol>
+<p>The supported <code>dataType</code> :
+<strong>OctetString</strong>
+Convert the incoming bytes to an hexadecimal encoding string. For example: 00 01 02 (Hex).</p>
+<p><strong>DateAndTime</strong>
+DateAndTime is a standard Textual Convention which is defined in the SNMPv2-TC. DateAndTime is resolved to base data type OCTET STRING. The DISPLAY-HINT format for DataAndTime is given as follows.</p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>octets</th>
+<th>contents</th>
+<th>range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1-2</td>
+<td>year</td>
+<td>0..65536</td>
+</tr>
+<tr>
+<td>2</td>
+<td>3</td>
+<td>month</td>
+<td>1..12</td>
+</tr>
+<tr>
+<td>3</td>
+<td>4</td>
+<td>day</td>
+<td>1..31</td>
+</tr>
+<tr>
+<td>4</td>
+<td>5</td>
+<td>hour</td>
+<td>0..23</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6</td>
+<td>minutes</td>
+<td>0..59</td>
+</tr>
+<tr>
+<td>6</td>
+<td>7</td>
+<td>seconds</td>
+<td>0..60</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8</td>
+<td>deci-seconds</td>
+<td>0..9</td>
+</tr>
+<tr>
+<td>8</td>
+<td>9</td>
+<td>direction from UTC</td>
+<td>&apos;+&apos; / &apos;-&apos;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10</td>
+<td>hours from UTC</td>
+<td>0..11</td>
+</tr>
+<tr>
+<td>10</td>
+<td>11</td>
+<td>minutes from UTC</td>
+<td>0..59</td>
+</tr>
+</tbody>
+</table>
+<p><strong>PhysAddress</strong>
+PhysAddress to represent media- or physical-level addresses. PhysAddress is resolved to base data type OCTET STRING. The format for PhysAddress is given as follows. <code>00:11:22:33:44:55</code></p>
+<p>Profile including both table entries and non-table entries.
+You can use a <strong>deviceCommands</strong> to include all the table entries.</p>
+<pre><code class="lang-yaml">...
+<span class="hljs-attr">deviceResources:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> ifNumber
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.2.1.0&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Int32&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> ifIndex
+<span class="hljs-attr">    isHidden:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.2.2.1.1&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>, isTableEntry: <span class="hljs-literal">true</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Int32Array&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> ifDescr
+<span class="hljs-attr">    isHidden:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;1.3.6.1.2.1.2.2.1.2&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>, isTableEntry: <span class="hljs-literal">true</span>  }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;StringArray&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+...
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> ifPhysAddress
+<span class="hljs-attr">    isHidden:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    attributes:</span>
+      { oid: <span class="hljs-string">&quot;.1.3.6.1.2.1.2.2.1.6&quot;</span>, community: <span class="hljs-string">&quot;public&quot;</span>, isTableEntry: <span class="hljs-literal">true</span>, dataType: <span class="hljs-string">&quot;PhysAddress&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;StringArray&quot;</span>, readWrite: <span class="hljs-string">&quot;R&quot;</span> }
+...
+
+<span class="hljs-attr">deviceCommands:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot; ifTable&quot;</span>
+<span class="hljs-attr">    readWrite:</span> <span class="hljs-string">&quot;R&quot;</span>
+<span class="hljs-attr">    isHidden:</span> <span class="hljs-literal">false</span>
+<span class="hljs-attr">    resourceOperations:</span>
+<span class="hljs-bullet">      -</span> { deviceResource: <span class="hljs-string">&quot;ifIndex&quot;</span> }
+<span class="hljs-bullet">      -</span> { deviceResource: <span class="hljs-string">&quot;ifDescr&quot;</span> }
+...
+<span class="hljs-bullet">      -</span> { deviceResource: <span class="hljs-string">&quot;ifPhysAddress&quot;</span> }
+...
+</code></pre>
+<p>For a full list of device profile fields and their required values see the <a href="https://docs.edgexfoundry.org/2.0/microservices/device/profile/Ch-DeviceProfileRef/" target="_blank">device profile reference</a>.</p>
+<h2 id="add-a-downlink-device">Add a downlink device</h2>
+<ol>
+<li><p>Navigate to <strong>EdgeX &gt; Downlink</strong>, then click the <strong>&#xFF0B;</strong> button.</p>
+<p> <img src="../assets/Downlink.png" alt="Downlink"></p>
+</li>
+<li><p>Upload device profile (<strong>snmp_mib2_system.yaml</strong>) and fill the device information.</p>
+<p> <img src="../assets/NewDeviceSNMP.png" alt="NewDeviceSNMP"></p>
+<p> Note: The <strong>Address</strong> of the <strong>SNMP agent</strong> should <strong>NOT</strong> be <code>127.0.0.1</code> or <code>localhost</code> (loopback), it should be a valid public IP address or a reachable FQDN.</p>
+</li>
+<li><p>Add AutoEvent</p>
+</li>
+<li><p>Click <strong>SAVE</strong> to save the device configuration</p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -1571,12 +1852,12 @@
 
             
                 
-                <a href="wifi.html" class="navigation navigation-prev " aria-label="Previous page: Wi-Fi">
+                <a href="modbus.html" class="navigation navigation-prev " aria-label="Previous page: Modbus (Downlink)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../TrapReceiver.html" class="navigation navigation-next " aria-label="Next page: Trap Receiver">
+                <a href="opcua.html" class="navigation navigation-next " aria-label="Next page: OPCUA (Downlink)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1587,7 +1868,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Routing","level":"1.2.5.3","depth":3,"next":{"title":"Trap Receiver","level":"1.2.6","depth":2,"path":"TrapReceiver.md","ref":"TrapReceiver.md","articles":[]},"previous":{"title":"Wi-Fi","level":"1.2.5.2","depth":3,"path":"networking/wifi.md","ref":"networking/wifi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.3","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"networking/routing.md","mtime":"2021-07-29T08:09:43.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T05:22:33.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"SNMP (Downlink)","level":"1.2.7.2","depth":3,"next":{"title":"OPCUA (Downlink)","level":"1.2.7.3","depth":3,"path":"EdgeX/opcua.md","ref":"EdgeX/opcua.md","articles":[]},"previous":{"title":"Modbus (Downlink)","level":"1.2.7.1","depth":3,"path":"EdgeX/modbus.md","ref":"EdgeX/modbus.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.3","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"EdgeX/snmp.md","mtime":"2021-11-24T01:49:40.798Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T05:22:33.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

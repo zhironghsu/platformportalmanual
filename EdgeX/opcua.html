@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Routing · Advantech Edge Suite</title>
+        <title>OPCUA (Downlink) · Advantech Edge Suite</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../TrapReceiver.html" />
+    <link rel="next" href="azure.html" />
     
     
-    <link rel="prev" href="wifi.html" />
+    <link rel="prev" href="snmp.html" />
     
 
     </head>
@@ -164,9 +164,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5" data-path="networking.html">
+        <li class="chapter " data-level="1.2.5" data-path="../networking/networking.html">
             
-                <a href="networking.html">
+                <a href="../networking/networking.html">
             
                     
                     Networking
@@ -178,9 +178,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.5.1" data-path="interfaces.html">
+        <li class="chapter " data-level="1.2.5.1" data-path="../networking/interfaces.html">
             
-                <a href="interfaces.html">
+                <a href="../networking/interfaces.html">
             
                     
                     Interfaces
@@ -191,9 +191,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.5.2" data-path="wifi.html">
+        <li class="chapter " data-level="1.2.5.2" data-path="../networking/wifi.html">
             
-                <a href="wifi.html">
+                <a href="../networking/wifi.html">
             
                     
                     Wi-Fi
@@ -204,9 +204,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.5.3" data-path="routing.html">
+        <li class="chapter " data-level="1.2.5.3" data-path="../networking/routing.html">
             
-                <a href="routing.html">
+                <a href="../networking/routing.html">
             
                     
                     Routing
@@ -249,9 +249,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.2.7.1" data-path="../EdgeX/modbus.html">
+        <li class="chapter " data-level="1.2.7.1" data-path="modbus.html">
             
-                <a href="../EdgeX/modbus.html">
+                <a href="modbus.html">
             
                     
                     Modbus (Downlink)
@@ -262,9 +262,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.2" data-path="../EdgeX/snmp.html">
+        <li class="chapter " data-level="1.2.7.2" data-path="snmp.html">
             
-                <a href="../EdgeX/snmp.html">
+                <a href="snmp.html">
             
                     
                     SNMP (Downlink)
@@ -275,9 +275,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.3" data-path="../EdgeX/opcua.html">
+        <li class="chapter active" data-level="1.2.7.3" data-path="opcua.html">
             
-                <a href="../EdgeX/opcua.html">
+                <a href="opcua.html">
             
                     
                     OPCUA (Downlink)
@@ -288,9 +288,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.4" data-path="../EdgeX/azure.html">
+        <li class="chapter " data-level="1.2.7.4" data-path="azure.html">
             
-                <a href="../EdgeX/azure.html">
+                <a href="azure.html">
             
                     
                     EdgeX to Azure IoT Hub (Uplink)
@@ -301,9 +301,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.7.5" data-path="../EdgeX/aws.html">
+        <li class="chapter " data-level="1.2.7.5" data-path="aws.html">
             
-                <a href="../EdgeX/aws.html">
+                <a href="aws.html">
             
                     
                     EdgeX to AWS IoT Core (Uplink)
@@ -1542,7 +1542,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Routing</a>
+        <a href=".." >OPCUA (Downlink)</a>
     </h1>
 </div>
 
@@ -1554,12 +1554,103 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="interface-routing">Interface Routing</h1>
-<p>The Interface Routing provides an overview of the <strong>Interface Metrics</strong>, you can click the <strong>EDIT</strong> button to change the sequence of network interface route.</p>
-<p><img src="../assets/networking_routing.png" alt="Interfaces Routing"></p>
-<h2 id="edit-interface-route">Edit Interface Route</h2>
-<p>You can <strong>drag and drop</strong> the interface handle to change the interface priority (metric) and then click the <strong>SAVE</strong> button to save the changes.</p>
-<p><img src="../assets/networking_routing_drag.png" alt="Interfaces Routing Drag"></p>
+                                <h1 id="opcua">OPCUA</h1>
+<p>This page describes how to connect OPCUA Servers to EdgeX. In this example, we using <a href="https://node-opcua.github.io/" target="_blank">NodeOPCUA</a>&apos;s sample server <a href="https://github.com/node-opcua/node-opcua-sampleserver" target="_blank">node-opcua-sampleserver</a>
+ to test the OPCUA device service features.</p>
+<p> <a href="https://node-opcua.github.io/" target="_blank">NodeOPCUA</a> is a OPC UA stack fully written in TypeScript for NodeJS.</p>
+<h2 id="run-opcua-server">Run OPCUA Server</h2>
+<pre><code class="lang-sh">$ git <span class="hljs-built_in">clone</span> https://github.com/node-opcua/node-opcua-sampleserver.git
+$ <span class="hljs-built_in">cd</span> node-opcua-sampleserver
+$ npm install
+$ node ./server.js
+</code></pre>
+<p>The <a href="https://github.com/node-opcua/node-opcua-sampleserver" target="_blank">node-opcua-sampleserver</a> provides the following nodes.</p>
+<table>
+<thead>
+<tr>
+<th>Node Id</th>
+<th>DataType</th>
+<th>Display Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ns=1;s=Temperature</td>
+<td>Double</td>
+<td>Temperature</td>
+</tr>
+<tr>
+<td>ns=1;b=ECD/qw==</td>
+<td>Double</td>
+<td>Percentage Memory Used</td>
+</tr>
+<tr>
+<td>ns=1;i=1001</td>
+<td>String</td>
+<td>MyVariable2</td>
+</tr>
+<tr>
+<td>ns=1;i=1002</td>
+<td>Double Array</td>
+<td>MyVariable3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="device-profile">Device Profile</h2>
+<p>Create the device profile (YAML) and save it as <strong>nodeopcua-server.yaml</strong>, as shown below:</p>
+<pre><code class="lang-yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">&quot;nodeopcua-server&quot;</span>
+<span class="hljs-attr">manufacturer:</span> <span class="hljs-string">&quot;Simulation&quot;</span>
+<span class="hljs-attr">model:</span> <span class="hljs-string">&quot;1&quot;</span>
+<span class="hljs-attr">labels:</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;OPCUA&quot;</span>
+<span class="hljs-bullet">  -</span> <span class="hljs-string">&quot;test&quot;</span>
+<span class="hljs-attr">description:</span> <span class="hljs-string">&quot;Simulation results of OPCUA Server&quot;</span>
+<span class="hljs-attr">deviceResources:</span>
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;Temperature&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Temperature&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { nodeID: <span class="hljs-string">&quot;ns=1;s=Temperature&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Float64&quot;</span>, readWrite: <span class="hljs-string">&quot;RW&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;MemoryUsage&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;Percentage Memory Used&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { nodeID: <span class="hljs-string">&quot;ns=1;b=ECD/qw==&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Float64&quot;</span>, readWrite: <span class="hljs-string">&quot;RW&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;MyVariable2&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;MyVariable2&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { nodeID: <span class="hljs-string">&quot;ns=1;i=1001&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;String&quot;</span>, readWrite: <span class="hljs-string">&quot;RW&quot;</span> }
+<span class="hljs-bullet">  -</span>
+<span class="hljs-attr">    name:</span> <span class="hljs-string">&quot;MyVariable3&quot;</span>
+<span class="hljs-attr">    description:</span> <span class="hljs-string">&quot;MyVariable3&quot;</span>
+<span class="hljs-attr">    attributes:</span>
+      { nodeID: <span class="hljs-string">&quot;ns=1;i=1002&quot;</span> }
+<span class="hljs-attr">    properties:</span>
+      { valueType: <span class="hljs-string">&quot;Float64Array&quot;</span>, readWrite: <span class="hljs-string">&quot;RW&quot;</span> }
+</code></pre>
+<p>In the OPCUA protocol, EdgeX provide the following attributes:</p>
+<p>1.<code>nodeID</code>: The OPCUA Node Id</p>
+<h2 id="add-a-downlink-device">Add a downlink device</h2>
+<ol>
+<li><p>Navigate to <strong>EdgeX &gt; Downlink</strong>, then click the <strong>&#xFF0B;</strong> button.</p>
+<p> <img src="../assets/Downlink.png" alt="Downlink"></p>
+</li>
+<li><p>Upload device profile (<strong>nodeopcua-server.yaml</strong>) and fill the device information.</p>
+<p> <img src="../assets/NewDeviceOPCUA.png" alt="NewDeviceSNMP"></p>
+<p> Note: The <strong>Endpoint</strong> of the <strong>OPCUA Server</strong> should <strong>NOT</strong> be <code>127.0.0.1</code> or <code>localhost</code> (loopback), it should be a valid public IP address or a reachable FQDN.</p>
+</li>
+<li><p>Add AutoEvent</p>
+</li>
+<li><p>Click <strong>SAVE</strong> to save the device configuration</p>
+</li>
+</ol>
 
                                 
                                 </section>
@@ -1571,12 +1662,12 @@
 
             
                 
-                <a href="wifi.html" class="navigation navigation-prev " aria-label="Previous page: Wi-Fi">
+                <a href="snmp.html" class="navigation navigation-prev " aria-label="Previous page: SNMP (Downlink)">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../TrapReceiver.html" class="navigation navigation-next " aria-label="Next page: Trap Receiver">
+                <a href="azure.html" class="navigation navigation-next " aria-label="Next page: EdgeX to Azure IoT Hub (Uplink)">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1587,7 +1678,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Routing","level":"1.2.5.3","depth":3,"next":{"title":"Trap Receiver","level":"1.2.6","depth":2,"path":"TrapReceiver.md","ref":"TrapReceiver.md","articles":[]},"previous":{"title":"Wi-Fi","level":"1.2.5.2","depth":3,"path":"networking/wifi.md","ref":"networking/wifi.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.3","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"networking/routing.md","mtime":"2021-07-29T08:09:43.767Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T05:22:33.368Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"OPCUA (Downlink)","level":"1.2.7.3","depth":3,"next":{"title":"EdgeX to Azure IoT Hub (Uplink)","level":"1.2.7.4","depth":3,"path":"EdgeX/azure.md","ref":"EdgeX/azure.md","articles":[]},"previous":{"title":"SNMP (Downlink)","level":"1.2.7.2","depth":3,"path":"EdgeX/snmp.md","ref":"EdgeX/snmp.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.3","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2021 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"EdgeX/opcua.md","mtime":"2021-10-28T08:28:08.451Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-11-24T05:22:33.368Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
