@@ -600,6 +600,45 @@
     
         <li class="chapter " data-level="1.3.3.2" data-path="systeminfo.html">
             
+                <a href="systeminfo.html#get-platformapihostdisplaycount">
+            
+                    
+                    GET /platform/api/host/display/count
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.3" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapihostscreenshotindex">
+            
+                    
+                    GET /platform/api/host/screenshot/:index
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.4" data-path="systeminfo.html">
+            
+                <a href="systeminfo.html#get-platformapihostscreenshotindexfile">
+            
+                    
+                    GET /platform/api/host/screenshot/:index/file
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3.5" data-path="systeminfo.html">
+            
                 <a href="systeminfo.html#get-platformapisystemperf">
             
                     
@@ -611,7 +650,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.3" data-path="systeminfo.html">
+        <li class="chapter " data-level="1.3.3.6" data-path="systeminfo.html">
             
                 <a href="systeminfo.html#get-platformapisystemperfcpu">
             
@@ -624,7 +663,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3.4" data-path="systeminfo.html">
+        <li class="chapter " data-level="1.3.3.7" data-path="systeminfo.html">
             
                 <a href="systeminfo.html#get-platformapisystemperfmemory">
             
@@ -1680,6 +1719,107 @@
 <p><a href="../appendix.html#calling-get-platformapihostinfo">Calling GET /platform/api/host/info</a></p>
 </li>
 </ul>
+<h3 id="get-platformapihostdisplaycount"><code>GET</code> /platform/api/host/display/count</h3>
+<p>Get available display count.</p>
+<ul>
+<li><p><strong>Prerequisite</strong></p>
+<ul>
+<li>rest-server 0.12.1.0 and later</li>
+</ul>
+</li>
+<li><p><strong>Request Headers</strong></p>
+<p><a href="authentication.html#post-authlogin">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
+<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<pre><code class="lang-json"><span class="hljs-number">1</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>401 Unauthorized</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-number">401</span>,
+    <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="get-platformapihostscreenshotindex"><code>GET</code> /platform/api/host/screenshot/:index</h3>
+<p>Get the specified display screenshot by <code>index</code></p>
+<ul>
+<li><p><strong>Prerequisite</strong></p>
+<ul>
+<li>rest-server 0.12.1.0 and later</li>
+</ul>
+</li>
+<li><p><strong>Request Headers</strong></p>
+<p><a href="authentication.html#post-authlogin">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
+<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;data&quot;</span>: <span class="hljs-string">&quot;&lt;base64 data&gt;&quot;</span>,
+  <span class="hljs-string">&quot;mediaType&quot;</span>: <span class="hljs-string">&quot;image/png&quot;</span>
+}
+</code></pre>
+<p>You can use <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/Data_URLs" target="_blank">Data URLs</a> to render the response base64 encoded image.</p>
+<pre><code class="lang-html">data:[<span class="hljs-tag">&lt;<span class="hljs-name">mediatype</span>&gt;</span>][;base64],<span class="hljs-tag">&lt;<span class="hljs-name">data</span>&gt;</span>
+</code></pre>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4
+//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==&quot;</span>  /&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>401 Unauthorized</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-number">401</span>,
+    <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+}
+</code></pre>
+</li>
+<li><p><strong>Response <code>422 Unprocessable Entity</code></strong></p>
+<p>The request has applied, but got errors.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;errors&quot;</span>: {
+        <span class="hljs-string">&quot;Host&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+    }
+}
+</code></pre>
+</li>
+</ul>
+<h3 id="get-platformapihostscreenshotindexfile"><code>GET</code> /platform/api/host/screenshot/:index/file</h3>
+<p>Get the specified display screenshot file by <code>index</code></p>
+<ul>
+<li><p><strong>Prerequisite</strong></p>
+<ul>
+<li>rest-server 0.12.1.0 and later</li>
+</ul>
+</li>
+<li><p><strong>Request Headers</strong></p>
+<p><a href="authentication.html#post-authlogin">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
+<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<p>Returns the screenshot image file directly</p>
+</li>
+<li><p><strong>Response <code>401 Unauthorized</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-number">401</span>,
+    <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+}
+</code></pre>
+</li>
+<li><p><strong>Response <code>422 Unprocessable Entity</code></strong></p>
+<p>The request has applied, but got errors.</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;errors&quot;</span>: {
+        <span class="hljs-string">&quot;Host&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+    }
+}
+</code></pre>
+</li>
+</ul>
 <h2 id="system-performance">System Performance</h2>
 <h3 id="get-platformapisystemperf"><code>GET</code> /platform/api/systemperf</h3>
 <p>Get CPU, Memory information and usage.</p>
@@ -1837,7 +1977,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"System Information","level":"1.3.3","depth":2,"next":{"title":"GET /platform/api/host/info","level":"1.3.3.1","depth":3,"anchor":"#get-platformapihostinfo","path":"RESTApi/systeminfo.md","ref":"RESTApi/systeminfo.md#get-platformapihostinfo","articles":[]},"previous":{"title":"GET /platform/api/hwmon/fanspeeds","level":"1.3.2.6","depth":3,"anchor":"#get-platformapihwmonfanspeeds","path":"RESTApi/hwmon.md","ref":"RESTApi/hwmon.md#get-platformapihwmonfanspeeds","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.5","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/systeminfo.md","mtime":"2021-07-29T08:09:43.403Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-03-02T01:13:03.705Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"System Information","level":"1.3.3","depth":2,"next":{"title":"GET /platform/api/host/info","level":"1.3.3.1","depth":3,"anchor":"#get-platformapihostinfo","path":"RESTApi/systeminfo.md","ref":"RESTApi/systeminfo.md#get-platformapihostinfo","articles":[]},"previous":{"title":"GET /platform/api/hwmon/fanspeeds","level":"1.3.2.6","depth":3,"anchor":"#get-platformapihwmonfanspeeds","path":"RESTApi/hwmon.md","ref":"RESTApi/hwmon.md#get-platformapihwmonfanspeeds","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.6","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/systeminfo.md","mtime":"2022-06-22T06:06:30.315Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-06-22T06:11:00.585Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
