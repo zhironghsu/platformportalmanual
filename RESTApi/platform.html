@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>REST API Reference · Advantech Edge Suite</title>
+        <title>Platform · Advantech Edge Suite</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="authentication.html" />
+    <link rel="next" href="platform.html" />
     
     
-    <link rel="prev" href="../appwdt.html" />
+    <link rel="prev" href="hwmon.html" />
     
 
     </head>
@@ -421,7 +421,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="restapi.html">
+        <li class="chapter " data-level="1.3" data-path="restapi.html">
             
                 <a href="restapi.html">
             
@@ -668,7 +668,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="platform.html">
+        <li class="chapter active" data-level="1.3.3" data-path="platform.html">
             
                 <a href="platform.html">
             
@@ -1859,7 +1859,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >REST API Reference</a>
+        <a href=".." >Platform</a>
     </h1>
 </div>
 
@@ -1871,13 +1871,32 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="rest-api-reference">REST API Reference</h1>
-<p>All Platform Portal functionality is built on REST APIs that developers can call directly to access resources and control their devices programmatically.</p>
-<h2 id="see-also">See Also</h2>
+                                <h1 id="platform">Platform</h1>
+<h2 id="get-platformapiping"><code>GET</code> /platform/api/ping</h2>
+<p>Ping the server to see if it is still alive</p>
 <ul>
-<li><p><a href="../appendix.html#invoking-a-rest-api-via-postman">Invoking a REST API via Postman</a></p>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<ul>
+<li><p><strong>Body</strong></p>
+<pre><code class="lang-json">pong
+</code></pre>
 </li>
-<li><p><a href="../appendix.html#server-sent-events-sse">Server-Sent Events (SSE)</a></p>
+</ul>
+</li>
+</ul>
+<h2 id="get-platformapiagentinfo"><code>GET</code> /platform/api/agentinfo</h2>
+<p>Get the agent information. (since v0.14.1)</p>
+<ul>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<p>Request Successfully</p>
+<ul>
+<li><p><strong>Body</strong></p>
+<pre><code class="lang-json">{
+  <span class="hljs-string">&quot;version&quot;</span>:<span class="hljs-string">&quot;v0.14.1&quot;</span>
+}
+</code></pre>
+</li>
+</ul>
 </li>
 </ul>
 
@@ -1891,12 +1910,12 @@
 
             
                 
-                <a href="../appwdt.html" class="navigation navigation-prev " aria-label="Previous page: Application Monitor">
+                <a href="hwmon.html#get-platformapihwmonfanspeeds" class="navigation navigation-prev " aria-label="Previous page: GET /platform/api/hwmon/fanspeeds">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="authentication.html" class="navigation navigation-next " aria-label="Next page: Authentication">
+                <a href="platform.html#get-platformapiping" class="navigation navigation-next " aria-label="Next page: GET /platform/api/ping">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1907,7 +1926,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"REST API Reference","level":"1.3","depth":1,"next":{"title":"Authentication","level":"1.3.1","depth":2,"path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md","articles":[{"title":"GET /auth/ping","level":"1.3.1.1","depth":3,"anchor":"#get-ping","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-ping","articles":[]},{"title":"GET /auth/version","level":"1.3.1.2","depth":3,"anchor":"#get-authversion","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-authversion","articles":[]},{"title":"GET /auth/agentinfo","level":"1.3.1.3","depth":3,"anchor":"#get-authagentinfo","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-authagentinfo","articles":[]},{"title":"GET /auth/token{?m}","level":"1.3.1.4","depth":3,"anchor":"#get-authtokenm","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-authtokenm","articles":[]},{"title":"POST /auth/login{?m}","level":"1.3.1.5","depth":3,"anchor":"#post-authloginm","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#post-authloginm","articles":[]},{"title":"POST /auth/logout","level":"1.3.1.6","depth":3,"anchor":"#post-authlogout","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#post-authlogout","articles":[]},{"title":"GET /auth/certificate","level":"1.3.1.7","depth":3,"anchor":"#get-authcertificate","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#get-authcertificate","articles":[]},{"title":"PUT /auth/user/admin/password","level":"1.3.1.8","depth":3,"anchor":"#put-authuseradminpassword","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#put-authuseradminpassword","articles":[]},{"title":"DELETE /auth/user/admin/password","level":"1.3.1.9","depth":3,"anchor":"#delete-authuseradminpassword","path":"RESTApi/authentication.md","ref":"RESTApi/authentication.md#delete-authuseradminpassword","articles":[]}]},"previous":{"title":"Application Monitor","level":"1.2.10","depth":2,"path":"appwdt.md","ref":"appwdt.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.8","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/restapi.md","mtime":"2021-07-29T08:09:43.401Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-07T07:09:06.577Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Platform","level":"1.3.3","depth":2,"next":{"title":"GET /platform/api/ping","level":"1.3.3.1","depth":3,"anchor":"#get-platformapiping","path":"RESTApi/platform.md","ref":"RESTApi/platform.md#get-platformapiping","articles":[]},"previous":{"title":"GET /platform/api/hwmon/fanspeeds","level":"1.3.2.6","depth":3,"anchor":"#get-platformapihwmonfanspeeds","path":"RESTApi/hwmon.md","ref":"RESTApi/hwmon.md#get-platformapihwmonfanspeeds","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.8","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/platform.md","mtime":"2022-09-07T06:13:07.871Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-07T07:09:06.577Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
