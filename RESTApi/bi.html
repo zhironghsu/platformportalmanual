@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>DeviceOn/BI · Advantech Edge Suite</title>
+        <title>DPM (DeviceOn/BI) · Advantech Edge Suite</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -1364,7 +1364,7 @@
                 <a href="bi.html">
             
                     
-                    DeviceOn/BI
+                    DPM (DeviceOn/BI)
             
                 </a>
             
@@ -1859,7 +1859,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >DeviceOn/BI</a>
+        <a href=".." >DPM (DeviceOn/BI)</a>
     </h1>
 </div>
 
@@ -1871,7 +1871,7 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="deviceonbi">DeviceOn/BI</h1>
+                                <h1 id="dpm-deviceonbi">DPM (DeviceOn/BI)</h1>
 <h2 id="get-biapiping"><code>GET</code> /bi/api/ping</h2>
 <p>Ping the server to see if it is still alive</p>
 <ul>
@@ -1900,7 +1900,7 @@
 </li>
 </ul>
 <h2 id="get-biapimacaddr"><code>GET</code> <strong>/bi/api/macaddr</strong></h2>
-<p>Get MAC address for DeviceOn/BI device registration.</p>
+<p>Get MAC address for device registration.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
@@ -1932,7 +1932,7 @@
 </li>
 </ul>
 <h2 id="get-biapiconnection"><code>GET</code> <strong>/bi/api/connection</strong></h2>
-<p>Get DeviceOn/BI connection status.</p>
+<p>Get connection status.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
@@ -1963,8 +1963,8 @@
 </li>
 <li><p><strong>Request Body</strong></p>
 <p><code>conncfg</code> is <strong>optional</strong>.</p>
-<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has provided, it will <a href="#post-biapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the DeviceOn/BI; if the <code>conncfg</code> not provided, it will <strong>enable</strong> the connection only.</p>
-<p>If the <code>op</code> is <strong>&quot;disconnect&quot;</strong>, it will <strong>disable</strong> the DeviceOn/BI connection. <code>conncfg</code> will be ignored.</p>
+<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has provided, it will <a href="#post-biapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the cloud; if the <code>conncfg</code> not provided, it will <strong>enable</strong> the connection only.</p>
+<p>If the <code>op</code> is <strong>&quot;disconnect&quot;</strong>, it will <strong>disable</strong> the cloud connection. <code>conncfg</code> will be ignored.</p>
 <pre><code class="lang-json">{
     <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;connect | disconnect&quot;</span>,
     <span class="hljs-string">&quot;conncfg&quot;</span>: {
@@ -1973,7 +1973,10 @@
         <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
         <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
         <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>
+        <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
+        <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional,</span>
+        <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional,</span>
     }
 }
 </code></pre>
@@ -2015,7 +2018,10 @@
     <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
     <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
     <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>
+    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional,</span>
+    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional,</span>
 }
 </code></pre>
 </li>
@@ -2040,7 +2046,7 @@
 </li>
 </ul>
 <h2 id="post-biapiconncfg"><code>POST</code> <strong>/bi/api/conncfg</strong></h2>
-<p>Set the DeviceOn/BI connection setting.</p>
+<p>Set the connection setting.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Login</a> with OS account to get JWT token (<code>token</code> field from the response body).</p>
@@ -2054,7 +2060,10 @@
     <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
     <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
     <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>
+    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional</span>
 }
 </code></pre>
 </li>
@@ -2063,11 +2072,14 @@
     <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
     <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
     <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">same</span> <span class="hljs-attr">as</span> <span class="hljs-attr">request</span> <span class="hljs-attr">body</span>&gt;</span>,
+    <span class="hljs-string">&quot;mqttPort&quot;</span>: &lt;same as request body&gt;,
     &quot;enableTLS&quot;: true | false, // same as request body
-    &quot;overWebSocket&quot;: true | false // same as request body
+    &quot;overWebSocket&quot;: true | false, // same as request body
+    &quot;connectionString&quot;: &quot;&lt;Azure IoT Hub Connection String&gt;&quot;, // optional
+    &quot;mac&quot;: &quot;AABBCCDDEEFF&quot;, // optional
+    &quot;uuid&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot; // optional
 }
-</span></code></pre>
+</code></pre>
 </li>
 <li><p><strong>Response <code>401 Unauthorized</code></strong></p>
 <pre><code class="lang-json">{
@@ -2165,7 +2177,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"DeviceOn/BI","level":"1.3.12","depth":2,"next":{"title":"GET /bi/api/ping","level":"1.3.12.1","depth":3,"anchor":"#get-biapiping","path":"RESTApi/bi.md","ref":"RESTApi/bi.md#get-biapiping","articles":[]},"previous":{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.11.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.9","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/bi.md","mtime":"2022-09-07T06:09:13.938Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-07T08:06:20.054Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"DPM (DeviceOn/BI)","level":"1.3.12","depth":2,"next":{"title":"GET /bi/api/ping","level":"1.3.12.1","depth":3,"anchor":"#get-biapiping","path":"RESTApi/bi.md","ref":"RESTApi/bi.md#get-biapiping","articles":[]},"previous":{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.11.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.9-rev1","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/bi.md","mtime":"2022-09-08T00:21:48.372Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-08T00:27:35.877Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
