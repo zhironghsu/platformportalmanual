@@ -1012,6 +1012,97 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.6.12" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifgpiocount">
+            
+                    
+                    GET /platform/api/perif/gpio/count
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.13" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifgpioall">
+            
+                    
+                    GET /platform/api/perif/gpio/all
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.14" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifgpioid">
+            
+                    
+                    GET /platform/api/perif/gpio/:id
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.15" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifgpioiddir">
+            
+                    
+                    GET /platform/api/perif/gpio/:id/dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.16" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#put-platformapiperifgpioiddir">
+            
+                    
+                    PUT /platform/api/perif/gpio/:id/dir
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.17" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#get-platformapiperifgpioidlevel">
+            
+                    
+                    GET /platform/api/perif/gpio/:id/level
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6.18" data-path="../RESTApi/perif.html">
+            
+                <a href="../RESTApi/perif.html#put-platformapiperifgpioidlevel">
+            
+                    
+                    PUT /platform/api/perif/gpio/:id/level
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1364,7 +1455,7 @@
                 <a href="../RESTApi/bi.html">
             
                     
-                    DPM (DeviceOn/BI)
+                    WISE-Edge365 (DeviceOn/BI)
             
                 </a>
             
@@ -1873,11 +1964,10 @@
                                 
                                 <h1 id="advantech-edge365-dpm-agent-service-cli">Advantech Edge365 DPM Agent Service (CLI)</h1>
 <pre><code class="lang-sh">Usage:
-  dpm-agent [flags]
-  dpm-agent [<span class="hljs-built_in">command</span>]
+  edge365-agent [flags]
+  edge365-agent [<span class="hljs-built_in">command</span>]
 
 Available Commands:
-  autoconn    Login with DeviceOn/BI account to <span class="hljs-built_in">set</span> up connection settings
   conn        Apply connection setting
   <span class="hljs-built_in">help</span>        Help about any <span class="hljs-built_in">command</span>
   service     Manage service
@@ -1899,7 +1989,7 @@ Flags:
                                       matching --tls-cert-file.
                                        (default <span class="hljs-string">&quot;key.pem&quot;</span>)
       --tls-key-dir string            Location of --tls-cert-file and --tls-private-key-file
-                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.dpm-agent/keys&quot;</span>)
+                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.edge365-agent/keys&quot;</span>)
       --insecure-address string       The IP address on <span class="hljs-built_in">which</span> to serve the --insecure-port
                                       (<span class="hljs-built_in">set</span> to 0.0.0.0 <span class="hljs-keyword">for</span> all IPv4 interfaces and :: <span class="hljs-keyword">for</span> all IPv6 interfaces).
       --insecure-port int             The port on <span class="hljs-built_in">which</span> to serve unsecured,
@@ -1910,24 +2000,24 @@ Flags:
                                       (CA cert, <span class="hljs-keyword">if</span> any, concatenated after server cert).
                                        (default <span class="hljs-string">&quot;cert.crt&quot;</span>)
       --jwt-cert-dir string           Location of --jwt-cert-file
-                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.dpm-agent/keys/jwt&quot;</span>)
+                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.edge365-agent/keys/jwt&quot;</span>)
       --jwt-check-interval duration   Duration that check and download JWT certificate
                                       from the authentication server. (default 5s)
       --config string                 Location of config files
-                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.dpm-agent&quot;</span>)
+                                       (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.edge365-agent&quot;</span>)
   <span class="hljs-_">-d</span>, --debug                         <span class="hljs-built_in">enable</span> debug output
-  -h, --help                          <span class="hljs-built_in">help</span> <span class="hljs-keyword">for</span> dpm-agent
-      --version                       version <span class="hljs-keyword">for</span> dpm-agent
+  -h, --help                          <span class="hljs-built_in">help</span> <span class="hljs-keyword">for</span> edge365-agent
+      --version                       version <span class="hljs-keyword">for</span> edge365-agent
 
-Use <span class="hljs-string">&quot;dpm-agent [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
+Use <span class="hljs-string">&quot;edge365-agent [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
 </code></pre>
 <ul>
 <li><p><code>service</code> command</p>
 <pre><code class="lang-sh">Manage service
 
 Usage:
-  dpm-agent service [flags]
-  dpm-agent service [<span class="hljs-built_in">command</span>]
+  edge365-agent service [flags]
+  edge365-agent service [<span class="hljs-built_in">command</span>]
 
 Available Commands:
   install     install service
@@ -1941,18 +2031,18 @@ Flags:
 
 Global Flags:
       --config string   Location of config files
-                         (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.dpm-agent&quot;</span>)
+                         (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.edge365-agent&quot;</span>)
   <span class="hljs-_">-d</span>, --debug           <span class="hljs-built_in">enable</span> debug output
 
-Use <span class="hljs-string">&quot;dpm-agent service [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
+Use <span class="hljs-string">&quot;edge365-agent service [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
 </code></pre>
 </li>
 <li><p><code>conn</code> command</p>
 <pre><code class="lang-sh">Apply connection setting
 
 Usage:
-  dpm-agent conn [flags]
-  dpm-agent conn [<span class="hljs-built_in">command</span>]
+  edge365-agent conn [flags]
+  edge365-agent conn [<span class="hljs-built_in">command</span>]
 
 Available Commands:
   <span class="hljs-built_in">disable</span>     Set connection to Disabled state
@@ -1976,31 +2066,7 @@ Global Flags:
 
   <span class="hljs-_">-d</span>, --debug               <span class="hljs-built_in">enable</span> debug output (default <span class="hljs-literal">true</span>)
 
-Use <span class="hljs-string">&quot;dpm-agent conn [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
-</code></pre>
-</li>
-<li><p><code>autoconn</code> command</p>
-<pre><code class="lang-sh">Login with DeviceOn/BI account to <span class="hljs-built_in">set</span> up connection settings
-
-Usage:
-  dpm-agent autoconn [flags]
-  dpm-agent autoconn [<span class="hljs-built_in">command</span>]
-
-Available Commands:
-  list        Get DeviceOn/BI station list
-
-Flags:
-  <span class="hljs-_">-a</span>, --address string    The DeviceOn/BI station URL
-  -u, --username string   Username <span class="hljs-keyword">for</span> the DeviceOn/BI station account
-  -p, --password string   Password <span class="hljs-keyword">for</span> the DeviceOn/BI station account
-  -h, --help              <span class="hljs-built_in">help</span> <span class="hljs-keyword">for</span> autoconn
-
-Global Flags:
-      --config string   Location of config files
-                         (default <span class="hljs-string">&quot;/etc/xdg/Advantech/.dpm-agent&quot;</span>)
-  <span class="hljs-_">-d</span>, --debug           <span class="hljs-built_in">enable</span> debug output
-
-Use <span class="hljs-string">&quot;dpm-agent autoconn [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
+Use <span class="hljs-string">&quot;edge365-agent conn [command] --help&quot;</span> <span class="hljs-keyword">for</span> more information about a command.
 </code></pre>
 </li>
 </ul>
@@ -2031,7 +2097,7 @@ Use <span class="hljs-string">&quot;dpm-agent autoconn [command] --help&quot;</s
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Advantech Edge365 DPM Agent Service (CLI)","level":"1.4.2","depth":2,"next":{"title":"Advantech EdgeX Helper Service (CLI)","level":"1.4.3","depth":2,"path":"cli/edgex.md","ref":"./cli/edgex.md","articles":[]},"previous":{"title":"Advantech JWT Authentication Service (CLI)","level":"1.4.1","depth":2,"path":"cli/authserver.md","ref":"./cli/authserver.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.9.9-rev1","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"cli/biagent.md","mtime":"2022-09-07T08:58:29.513Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-08T00:27:35.877Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Advantech Edge365 DPM Agent Service (CLI)","level":"1.4.2","depth":2,"next":{"title":"Advantech EdgeX Helper Service (CLI)","level":"1.4.3","depth":2,"path":"cli/edgex.md","ref":"./cli/edgex.md","articles":[]},"previous":{"title":"Advantech JWT Authentication Service (CLI)","level":"1.4.1","depth":2,"path":"cli/authserver.md","ref":"./cli/authserver.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"0.10.1","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2022 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"cli/biagent.md","mtime":"2022-09-21T00:33:36.416Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-09-28T01:05:30.951Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
