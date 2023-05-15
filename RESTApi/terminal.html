@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>EdgeX · Advantech Edge Suite</title>
+        <title>Terminal · Advantech Edge Suite</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="edgex.md" />
+    <link rel="next" href="terminal.html" />
     
     
-    <link rel="prev" href="appwdt.html" />
+    <link rel="prev" href="service.html" />
     
 
     </head>
@@ -1897,7 +1897,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.15" data-path="EdgeX.html">
+        <li class="chapter " data-level="1.3.15" data-path="EdgeX.html">
             
                 <a href="EdgeX.html">
             
@@ -2026,7 +2026,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.17" data-path="terminal.html">
+        <li class="chapter active" data-level="1.3.17" data-path="terminal.html">
             
                 <a href="terminal.html">
             
@@ -2267,7 +2267,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >EdgeX</a>
+        <a href=".." >Terminal</a>
     </h1>
 </div>
 
@@ -2279,72 +2279,20 @@
                             
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="edgex">EdgeX</h1>
-<h2 id="get-edgexapiping"><code>GET</code> /edgex/api/ping</h2>
-<p>Ping the server to see if it is still alive.</p>
-<ul>
-<li><p><strong>Response <code>200 OK</code></strong></p>
-<ul>
-<li><p><strong>Body</strong></p>
-<pre><code class="lang-json">pong
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="get-edgexapiagentinfo"><code>GET</code> /edgex/api/agentinfo</h2>
-<p>Get the agent information. (since v0.6.1)</p>
-<ul>
-<li><p><strong>Response <code>200 OK</code></strong></p>
-<p>Request Successfully</p>
-<ul>
-<li><p><strong>Body</strong></p>
-<pre><code class="lang-json">{
-  <span class="hljs-string">&quot;version&quot;</span>:<span class="hljs-string">&quot;v0.6.1&quot;</span>
-}
-</code></pre>
-</li>
-</ul>
-</li>
-</ul>
-<h2 id="reverse-proxy">Reverse Proxy</h2>
-<p>We provide the reverse proxy (edgex-helper 0.4.1 and later) for some major EdgeX services.</p>
-<table>
-<thead>
-<tr>
-<th>Services Name</th>
-<th>Base URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/core-data/2.1.0" target="_blank">core-data</a></td>
-<td>/edgex/api/core-data-v2/api/v2</td>
-</tr>
-<tr>
-<td><a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/core-metadata/2.1.0" target="_blank">core-metadata</a></td>
-<td>/edgex/api/core-metadata-v2/api/v2</td>
-</tr>
-<tr>
-<td><a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/core-command/2.1.0" target="_blank">core-command</a></td>
-<td>/edgex/api/core-command-v2/api/v2</td>
-</tr>
-<tr>
-<td><a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/system-agent/2.1.0" target="_blank">system agent</a></td>
-<td>/edgex/api/system-agent-v2/api/v2</td>
-</tr>
-</tbody>
-</table>
-<p>For example, the URL of the <a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/core-data/2.1.0" target="_blank">core-data</a> API <code>GET</code> /<strong>event/all</strong> will be:
-<code>GET</code> /edgex/api/core-data-v2/api/v2/<strong>event/all</strong></p>
-<p>It requires JWT token to access each APIs behind the reverse proxy.</p>
-<p>If you need the EdgeX OpenAPI documents, please refer to <a href="https://github.com/edgexfoundry/edgex-go/tree/v2.1.0/openapi/v2" target="_blank">https://github.com/edgexfoundry/edgex-go/tree/v2.1.0/openapi/v2</a></p>
-<h2 id="example">Example</h2>
-<p><code>GET</code> /edgex/api/core-data-v2/api/v2/<strong>event/all</strong></p>
+                                <h1 id="terminal">Terminal</h1>
+<p>(since rest-server 1.0.1)</p>
+<h2 id="get-platformapitermws"><code>GET</code> /platform/api/term/ws</h2>
+<p>Get the web terminal basic information.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
 <pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;os&quot;</span>: <span class="hljs-string">&quot;windows&quot;</span> | <span class="hljs-string">&quot;linux&quot;</span>,
+}
 </code></pre>
 </li>
 <li><p><strong>Response <code>401 Unauthorized</code></strong></p>
@@ -2354,9 +2302,90 @@
 }
 </code></pre>
 </li>
-<li><p><a href="https://app.swaggerhub.com/apis-docs/EdgeXFoundry1/core-data/2.1.0#/default/get_event_all" target="_blank">Other Response Code</a></p>
+</ul>
+<h2 id="get-wssurlplatformapitermws"><code>GET</code> wss://(URL)/platform/api/term/ws</h2>
+<p>Open a local shell, making it communicate to WebSocket using stdin/stdout.</p>
+<ul>
+<li><p><strong>Request Headers</strong></p>
+<p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
+<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Message Description</strong></p>
 </li>
 </ul>
+<p><img src="../assets/websocket.png" alt="websocket"></p>
+<p>Message Format
+<img src="../assets/terminal-msg-format.png" alt="websocket"></p>
+<p>Outbound Message &#x2191;</p>
+<table>
+<thead>
+<tr>
+<th>Cmd</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>base64-encoded terminal output</td>
+<td>terminal output</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>Pong message (heartbeat)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>The New Title</td>
+<td>Set window title</td>
+</tr>
+<tr>
+<td>4</td>
+<td>{&quot;font-size&quot;:12,&quot;font-family&quot;:&quot;serif&quot;}</td>
+<td>Set Preferences</td>
+</tr>
+<tr>
+<td>5</td>
+<td>false</td>
+<td>Set auto reconnect</td>
+</tr>
+<tr>
+<td>6</td>
+<td>1024</td>
+<td>Set Buffer Size</td>
+</tr>
+</tbody>
+</table>
+<p>Inbound Message &#x2193;</p>
+<table>
+<thead>
+<tr>
+<th>Cmd</th>
+<th>Data</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>base64-encoded terminal input</td>
+<td>terminal input data</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>Ping message</td>
+</tr>
+<tr>
+<td>3</td>
+<td>{&quot;columns&quot;:128,&quot;rows&quot;:21}</td>
+<td>Resize Terminal</td>
+</tr>
+</tbody>
+</table>
 
                                 
                                 </section>
@@ -2368,12 +2397,12 @@
 
             
                 
-                <a href="appwdt.html#get-platformapiappwdtapplistbynameid" class="navigation navigation-prev " aria-label="Previous page: GET /platform/api/appwdt/AppListByName/:id">
+                <a href="service.html#put-platformapiservicename" class="navigation navigation-prev " aria-label="Previous page: PUT /platform/api/service/:name">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="edgex.md#get-edgexapiping" class="navigation navigation-next " aria-label="Next page: GET /edgex/api/ping">
+                <a href="terminal.html#get-platformapitermws" class="navigation navigation-next " aria-label="Next page: GET /platform/api/term/ws">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2384,7 +2413,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EdgeX","level":"1.3.15","depth":2,"next":{"title":"GET /edgex/api/ping","level":"1.3.15.1","depth":3,"anchor":"#get-edgexapiping","path":"RESTApi/edgex.md","ref":"RESTApi/edgex.md#get-edgexapiping","articles":[]},"previous":{"title":"GET /platform/api/appwdt/AppListByName/:id","level":"1.3.14.5","depth":3,"anchor":"#get-platformapiappwdtapplistbynameid","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapplistbynameid","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.0.0","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/EdgeX.md","mtime":"2023-05-08T07:02:28.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-15T00:19:56.836Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Terminal","level":"1.3.17","depth":2,"next":{"title":"GET /platform/api/term/ws","level":"1.3.17.1","depth":3,"anchor":"#get-platformapitermws","path":"RESTApi/terminal.md","ref":"RESTApi/terminal.md#get-platformapitermws","articles":[]},"previous":{"title":"PUT /platform/api/service/:name","level":"1.3.16.3","depth":3,"anchor":"#put-platformapiservicename","path":"RESTApi/service.md","ref":"RESTApi/service.md#put-platformapiservicename","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.0.0","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/terminal.md","mtime":"2023-05-15T00:16:08.238Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-15T00:19:56.836Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
