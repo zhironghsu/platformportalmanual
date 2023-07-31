@@ -1808,6 +1808,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.13.17" data-path="RESTApi/edge365.html">
+            
+                <a href="RESTApi/edge365.html#post-edge365apipemtemp">
+            
+                    
+                    POST /edge365/api/pem/temp
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2282,9 +2295,50 @@
                                 <h1 id="dashboard">Dashboard</h1>
 <p>The <strong>Dashboard</strong> provides a summary of system information and a WISE-Edge365 (aka DeviceOn/BI) widget.</p>
 <p><img src="assets/Dashboard.png" alt="Dashbaord"></p>
-<h2 id="wise-edge365-setting">WISE-Edge365 setting</h2>
-<p>The <strong>WISE-Edge365 setting widget</strong> is the same in the <a href="settings.html">Setting</a> page.</p>
+<h2 id="wise-edge365">WISE-Edge365</h2>
+<p>This widget enables and disables the connection to the cloud, MQTT/Azure IoTHub connection settings.</p>
 <p><img src="assets/edge365.png" alt="WISE-Edge365"></p>
+<h3 id="device-credential">Device Credential</h3>
+<p><img src="assets/edge365-credential.png" alt="WISE-Edge365"></p>
+<p>You could follow the hint to copy the Device Credential or Login to EDGE365 to get the Device Credential automatically.</p>
+<p><img src="assets/edge365-credential-hint.png" alt="WISE-Edge365-Hint"></p>
+<ul>
+<li><p>Copy Credential</p>
+<p>Here is the Connection tab of a device on the WISE-Edge365 for your reference.</p>
+<p><img src="assets/connectionsettingdpm.png" alt="Connection Setting DPM"></p>
+</li>
+<li><p>Login to Credential</p>
+<p>1. Log in with your <strong>WISE-Edge365</strong> account.</p>
+<p><img src="assets/edge365auto.png" alt="Device Registration Auto"></p>
+<p>2. Select a tenant if required
+<img src="assets/tenant-selection.png" alt="Tenant Selection"></p>
+</li>
+</ul>
+<p>Now you can click the SAVE button to apply the Device Credential to you device.</p>
+<p>  <img src="assets/edge365-save-cred.png" alt="Save Credential"></p>
+<h4 id="ssltls-connection">SSL/TLS Connection</h4>
+<p>The agent enables the SSL/TLS connection to the Edge365 server by default. But for the servers that do not have the valid certificates (i.e. self-signed, using IP for the server), you could add the extra CA certificates or to skip the certificate verification by selecting the <strong>Insecure SSL/TLS</strong> checkbox.</p>
+<p>  <img src="assets/edge365-save-cred-insecure.png" alt="Save Credential"></p>
+<h3 id="services">Services</h3>
+<p>(since 1.0.1)</p>
+<p>It lists the Edge365-related services and shows their versions.</p>
+<p><img src="assets/edge365-services.png" alt="services"></p>
+<h3 id="functions">Functions</h3>
+<p>(since 1.0.1)</p>
+<p>It shows the device&apos;s capabilities.</p>
+<p><img src="assets/edge365-functions.png" alt="functions"></p>
+<h3 id="edge-bus">Edge Bus</h3>
+<p>(since 1.0.1)</p>
+<p>It shows the EdgeBus (Embedded Broker) information and allows you to enable/disable the EdgeBus.</p>
+<p><img src="assets/edge365-edgebus.png" alt="edgebus"></p>
+<h3 id="tag-data">Tag Data</h3>
+<p>(since 1.0.1)</p>
+<p>You could send tag data to Edge365.</p>
+<p><img src="assets/edge365-tagdata.png" alt="tag"></p>
+<h3 id="apphub-log-settings">AppHub Log Settings</h3>
+<p>(since 1.0.1)</p>
+<p>You could change AppHub&apos;s log settings.</p>
+<p><img src="assets/edge365-apphub.png" alt="apphub"></p>
 <h2 id="system-information">System Information</h2>
 <p>Device Name from the BIOS.</p>
 <p><img src="assets/dashboardsysinfo.png" alt="System Information"></p>
@@ -2335,7 +2389,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dashboard","level":"1.2.2","depth":2,"next":{"title":"Disk Monitor","level":"1.2.3","depth":2,"path":"DiskMonitor.md","ref":"DiskMonitor.md","articles":[]},"previous":{"title":"Remote control","level":"1.2.1.1","depth":3,"path":"control.md","ref":"control.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.0.0","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"Dashboard.md","mtime":"2023-05-08T07:12:16.215Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-05-15T00:19:56.836Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dashboard","level":"1.2.2","depth":2,"next":{"title":"Disk Monitor","level":"1.2.3","depth":2,"path":"DiskMonitor.md","ref":"DiskMonitor.md","articles":[]},"previous":{"title":"Remote control","level":"1.2.1.1","depth":3,"path":"control.md","ref":"control.md","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.1.1","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"Dashboard.md","mtime":"2023-07-26T09:25:20.836Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-07-31T04:58:59.222Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
