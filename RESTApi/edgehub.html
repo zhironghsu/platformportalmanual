@@ -2482,7 +2482,7 @@
 </li>
 <li><p><strong>Request Body</strong></p>
 <p><code>conncfg</code> is <strong>optional</strong>.</p>
-<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has been provided, it will <a href="#post-edgehubapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the cloud; if the <code>conncfg</code> not provided, it will <strong>enable</strong> the connection only.</p>
+<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has been provided, it will <a href="#post-edgehubapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the cloud; if the <code>conncfg</code> is not provided, it will <strong>enable</strong> the connection only.</p>
 <p>If the <code>op</code> is <strong>&quot;disconnect&quot;</strong>, it will <strong>disable</strong> the cloud connection. <code>conncfg</code> will be ignored.</p>
 <pre><code class="lang-json">{
     <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;connect | disconnect&quot;</span>,
@@ -2495,7 +2495,25 @@
         <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
         <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
         <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional,</span>
-        <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional,</span>
+        <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span>, <span class="hljs-comment">// optional,</span>
+        <span class="hljs-string">&quot;deviceon&quot;</span>: { <span class="hljs-comment">// optional (since edgehub-agent 1.0.1)</span>
+          <span class="hljs-string">&quot;dccsUrl&quot;</span>: <span class="hljs-string">&quot;&lt;URL&gt;&quot;</span>,
+          <span class="hljs-string">&quot;iotKey&quot;</span>: <span class="hljs-string">&quot;&lt;key&gt;&quot;</span>
+        }
+    }
+}
+</code></pre>
+<p>or</p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;connect | disconnect&quot;</span>,
+    <span class="hljs-string">&quot;conncfg&quot;</span>: {
+        <span class="hljs-comment">// (since edgehub-agent 1.1.0)</span>
+        <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>,
+        <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;deviceon&quot;</span>: { <span class="hljs-comment">// optional (since edgehub-agent 1.0.1)</span>
+          <span class="hljs-string">&quot;dccsUrl&quot;</span>: <span class="hljs-string">&quot;&lt;URL&gt;&quot;</span>,
+          <span class="hljs-string">&quot;iotKey&quot;</span>: <span class="hljs-string">&quot;&lt;key&gt;&quot;</span>
+        }
     }
 }
 </code></pre>
@@ -2537,8 +2555,15 @@
     <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
     <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
     <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
-    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional,</span>
-    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional,</span>
+    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded credentail string&gt;&quot;</span>,
+    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...],
+    <span class="hljs-string">&quot;iothubKey&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
+    <span class="hljs-string">&quot;iothubCert&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
+    <span class="hljs-string">&quot;mqttKey&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
+    <span class="hljs-string">&quot;mqttCert&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>
 }
 </code></pre>
 </li>
@@ -2586,28 +2611,28 @@
     <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
     <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional</span>
     <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span>, <span class="hljs-comment">// optional</span>
-    <span class="hljs-string">&quot;deviceon&quot;</span>: { <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;deviceon&quot;</span>: { <span class="hljs-comment">// optional (since edgehub-agent 1.0.1)</span>
       <span class="hljs-string">&quot;dccsUrl&quot;</span>: <span class="hljs-string">&quot;&lt;URL&gt;&quot;</span>,
       <span class="hljs-string">&quot;iotKey&quot;</span>: <span class="hljs-string">&quot;&lt;key&gt;&quot;</span>
     }
 }
 </code></pre>
+<p>or</p>
+<pre><code class="lang-json">{
+    <span class="hljs-comment">// (since edgehub-agent 1.1.0)</span>
+    <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>,
+    <span class="hljs-string">&quot;deviceon&quot;</span>: { <span class="hljs-comment">// optional (since edgehub-agent 1.0.1)</span>
+      <span class="hljs-string">&quot;dccsUrl&quot;</span>: <span class="hljs-string">&quot;&lt;URL&gt;&quot;</span>,
+      <span class="hljs-string">&quot;iotKey&quot;</span>: <span class="hljs-string">&quot;&lt;key&gt;&quot;</span>
+    },
+    <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...], <span class="hljs-comment">// optional</span>
+}
+</code></pre>
 </li>
 <li><p><strong>Response <code>200 OK</code></strong></p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
-    <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;same as request body&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttPort&quot;</span>: &lt;same as request body&gt;,
-    &quot;enableTLS&quot;: true | false, // same as request body
-    &quot;overWebSocket&quot;: true | false, // same as request body
-    &quot;connectionString&quot;: &quot;&lt;Azure IoT Hub Connection String&gt;&quot;, // optional
-    &quot;mac&quot;: &quot;AABBCCDDEEFF&quot;, // optional
-    &quot;uuid&quot;: &quot;123e4567-e89b-12d3-a456-426614174000&quot;, // optional
-    &quot;deviceon&quot;: { // optional
-      &quot;dccsUrl&quot;: &quot;&lt;URL&gt;&quot;,
-      &quot;iotKey&quot;: &quot;&lt;key&gt;&quot;
-    }
+    <span class="hljs-comment">// same as request body</span>
 }
 </code></pre>
 </li>
@@ -2737,9 +2762,7 @@ It&apos;s will be sent to the cloud via MQTT topic <strong>Advantech/\<mac\>/upd
 <li><p><strong>Response <code>400 Bad Requset</code></strong></p>
 <p>The request data is empty, invalid format, or incorrect value.</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;errors&quot;</span>: {
-        <span class="hljs-string">&quot;EdgeHub&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
-    }
+    <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
 }
 </code></pre>
 </li>
@@ -2853,9 +2876,7 @@ It&apos;s will be sent to the cloud via MQTT topic <strong>Advantech/\<mac\>/upd
 <li><p><strong>Response <code>400 Bad Requset</code></strong></p>
 <p>The request data is empty, invalid format, or incorrect value.</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;errors&quot;</span>: {
-        <span class="hljs-string">&quot;AppHub&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
-    }
+    <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
 }
 </code></pre>
 </li>
@@ -3014,7 +3035,7 @@ It&apos;s will be sent to the cloud via MQTT topic <strong>Advantech/\<mac\>/upd
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EdgeHub","level":"1.3.13","depth":2,"next":{"title":"GET /edgehub/api/ping","level":"1.3.13.1","depth":3,"anchor":"#get-edgehubapiping","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiping","articles":[]},"previous":{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.12.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.2.0","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/edgehub.md","mtime":"2023-08-25T06:21:00.858Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-25T07:28:48.294Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"EdgeHub","level":"1.3.13","depth":2,"next":{"title":"GET /edgehub/api/ping","level":"1.3.13.1","depth":3,"anchor":"#get-edgehubapiping","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiping","articles":[]},"previous":{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.12.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]},"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.2.1","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2023 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/edgehub.md","mtime":"2023-08-28T05:30:42.369Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-28T05:37:42.911Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
