@@ -490,7 +490,7 @@
     
         <li class="chapter " data-level="1.3.1.1" data-path="authentication.html">
             
-                <a href="authentication.html#get-ping">
+                <a href="authentication.html#get-authping">
             
                     
                     GET /auth/ping
@@ -1875,6 +1875,19 @@
     
         <li class="chapter " data-level="1.3.13.21" data-path="edgehub.html">
             
+                <a href="edgehub.html#get-edgehubapiwslstatus">
+            
+                    
+                    GET /edgehub/api/wsl/status
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.13.22" data-path="edgehub.html">
+            
                 <a href="edgehub.html#post-edgehubapiinitialcode">
             
                     
@@ -1886,7 +1899,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.13.22" data-path="edgehub.html">
+        <li class="chapter " data-level="1.3.13.23" data-path="edgehub.html">
             
                 <a href="edgehub.html#initial-code-retrieval">
             
@@ -1899,7 +1912,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.13.23" data-path="edgehub.html">
+        <li class="chapter " data-level="1.3.13.24" data-path="edgehub.html">
             
                 <a href="edgehub.html#post-edgehubapidevicechallenge">
             
@@ -1912,7 +1925,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.13.24" data-path="edgehub.html">
+        <li class="chapter " data-level="1.3.13.25" data-path="edgehub.html">
             
                 <a href="edgehub.html#post-edgehubapideviceregister">
             
@@ -1985,10 +1998,10 @@
     
         <li class="chapter " data-level="1.3.14.4" data-path="appwdt.html">
             
-                <a href="appwdt.html#delete-platformapiappwdtapplist">
+                <a href="appwdt.html#get-platformapiappwdtapplist">
             
                     
-                    GET /platform/api/appwdt/APPList
+                    GET /platform/api/appwdt/AppList
             
                 </a>
             
@@ -2028,9 +2041,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.15.1" data-path="edgex.html">
+        <li class="chapter " data-level="1.3.15.1" data-path="EdgeX.html">
             
-                <a href="edgex.html#get-edgexapiping">
+                <a href="EdgeX.html#get-edgexapiping">
             
                     
                     GET /edgex/api/ping
@@ -2041,9 +2054,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.15.2" data-path="edgex.html">
+        <li class="chapter " data-level="1.3.15.2" data-path="EdgeX.html">
             
-                <a href="edgex.html#get-edgexapiagentinfo">
+                <a href="EdgeX.html#get-edgexapiagentinfo">
             
                     
                     GET /edgex/api/agentinfo
@@ -2336,7 +2349,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../cli/authserver.html">
+        <li class="chapter " data-level="1.4.1" data-path="../cli/datadir.html">
+            
+                <a href="../cli/datadir.html">
+            
+                    
+                    Data Directories
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../cli/authserver.html">
             
                 <a href="../cli/authserver.html">
             
@@ -2349,7 +2375,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../cli/edgehubagent.html">
+        <li class="chapter " data-level="1.4.3" data-path="../cli/edgehubagent.html">
             
                 <a href="../cli/edgehubagent.html">
             
@@ -2360,9 +2386,41 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../cli/edgehubagent.html">
+            
+                <a href="../cli/edgehubagent.html#lan-onboarding">
+            
+                    
+                    LAN onboarding
+            
+                </a>
+            
+
+            
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../cli/edgex.html">
+        <li class="chapter " data-level="1.4.3.2" data-path="../cli/edgehubagent.html">
+            
+                <a href="../cli/edgehubagent.html#when-an-application-is-refused">
+            
+                    
+                    When an application is refused
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../cli/edgex.html">
             
                 <a href="../cli/edgex.html">
             
@@ -2375,7 +2433,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../cli/portalsvc.html">
+        <li class="chapter " data-level="1.4.5" data-path="../cli/portalsvc.html">
             
                 <a href="../cli/portalsvc.html">
             
@@ -2388,7 +2446,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../cli/restserver.html">
+        <li class="chapter " data-level="1.4.6" data-path="../cli/restserver.html">
             
                 <a href="../cli/restserver.html">
             
@@ -2568,6 +2626,7 @@
 </ul>
 <h2 id="get-edgehubapimacaddr"><code>GET</code> <strong>/edgehub/api/macaddr</strong></h2>
 <p>Get MAC address for device registration.</p>
+<p>It is a default picked among the device&apos;s network adapters until a registration or a stored device credential records one, and a device credential for another of its adapters changes it, as <a href="#post-edgehubapiconncfg">POST /edgehub/api/conncfg</a> describes (since edgehub-agent 2.4.0).</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
@@ -2641,33 +2700,20 @@ it again overwrites the setting that was kept.</p>
 </li>
 <li><p><strong>Request Body</strong></p>
 <p><code>conncfg</code> is <strong>optional</strong>.</p>
-<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has been provided, it will <a href="#post-edgehubapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the cloud; if the <code>conncfg</code> is not provided, it will <strong>enable</strong> the connection only.</p>
+<p>If the <code>op</code> is <strong>&quot;connect&quot;</strong> and the <code>conncfg</code> has been provided, it will <a href="#post-edgehubapiconncfg">set the connection setting</a> first, then <strong>enable</strong> the connection to the cloud, which POST /edgehub/api/conncfg alone leaves disabled; if the <code>conncfg</code> is not provided, it will <strong>enable</strong> the connection only.</p>
+<p>A <code>conncfg</code> without <code>deviceTokenCredential</code> changes only the TLS options of the stored device credential, which is not supplied again. When the connection then fails, a device credential given with the request is cleared, since its caller still holds it; a stored one is kept, also when only its TLS options changed. A credential the cloud reports revoked is still removed.</p>
 <p>If the <code>op</code> is <strong>&quot;disconnect&quot;</strong>, it will <strong>disable</strong> the cloud connection. <code>conncfg</code> will be ignored.</p>
+<p>AppHub gets the device&apos;s MQTT connection while the connection is enabled and has none while it is disabled; see <a href="#put-edgehubapiapphubservice">PUT /edgehub/api/apphub/service</a>.</p>
 <pre><code class="lang-json">{
     <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;connect | disconnect&quot;</span>,
     <span class="hljs-string">&quot;conncfg&quot;</span>: {
-        <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;username&gt;&quot;</span>,
-        <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&lt;password&gt;&quot;</span>,
-        <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
-        <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
-        <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-        <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
-        <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional,</span>
-        <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional</span>
+        <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>, <span class="hljs-comment">// optional (since edgehub-agent 2.4.0)</span>
+        <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...] <span class="hljs-comment">// optional</span>
     }
 }
 </code></pre>
-<p>or</p>
-<pre><code class="lang-json">{
-    <span class="hljs-string">&quot;op&quot;</span>: <span class="hljs-string">&quot;connect | disconnect&quot;</span>,
-    <span class="hljs-string">&quot;conncfg&quot;</span>: {
-        <span class="hljs-comment">// (since edgehub-agent 1.1.0)</span>
-        <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>,
-        <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>
-    }
-}
-</code></pre>
+<p><code>conncfg</code> takes the body of <a href="#post-edgehubapiconncfg">POST /edgehub/api/conncfg</a> and is refused the same way.</p>
 </li>
 <li><p><strong>Response <code>200 OK</code></strong></p>
 </li>
@@ -2690,7 +2736,11 @@ it again overwrites the setting that was kept.</p>
 </li>
 </ul>
 <h2 id="get-edgehubapiconncfg"><code>GET</code> <strong>/edgehub/api/conncfg</strong></h2>
-<p>Get the current device connection setting.</p>
+<p>Get a summary of the current device connection setting.</p>
+<p>The summary carries no secret. Passwords, connection strings, private keys and
+the device credential itself can be set, replaced or cleared, but never read
+back (since edgehub-agent 2.4.0). For a device credential, the broker, the
+username and the device identity are read from the credential.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
@@ -2699,22 +2749,18 @@ it again overwrites the setting that was kept.</p>
 </li>
 <li><p><strong>Response <code>200 OK</code></strong></p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;username&gt;&quot;</span>,
-    <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&lt;password&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
-    <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;credential&quot;</span>: <span class="hljs-string">&quot;token | legacy&quot;</span>, <span class="hljs-comment">// &quot;token&quot;: a device credential; &quot;legacy&quot;: separate fields</span>
+    <span class="hljs-string">&quot;type&quot;</span>: <span class="hljs-string">&quot;Computer&quot;</span>, <span class="hljs-comment">// optional</span>
     <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional</span>
     <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span>, <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;FQDN or IP&gt;&quot;</span>,
+    <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">8883</span>,
+    <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
+    <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;username&gt;&quot;</span>,
+    <span class="hljs-string">&quot;x509&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>, <span class="hljs-comment">// true: the device authenticates with a client certificate</span>
+    <span class="hljs-string">&quot;certExpiresAt&quot;</span>: <span class="hljs-number">1798761600</span>, <span class="hljs-comment">// optional; client certificate expiry, Unix seconds</span>
     <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded credentail string&gt;&quot;</span>,
-    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...],
-    <span class="hljs-string">&quot;iothubKey&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
-    <span class="hljs-string">&quot;iothubCert&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttKey&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttCert&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>
+    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...] <span class="hljs-comment">// the stored CA certificates; an entry holding anything else is left out</span>
 }
 </code></pre>
 </li>
@@ -2754,7 +2800,8 @@ setting&quot; and provisioning again overwrites the setting that was kept; see
 </li>
 </ul>
 <h2 id="post-edgehubapiconncfg"><code>POST</code> <strong>/edgehub/api/conncfg</strong></h2>
-<p>Set the connection setting.</p>
+<p>Set the connection setting and disable the connection.</p>
+<p>The device disconnects and stays disconnected, also after a restart, until <a href="#post-edgehubapiconnection">POST /edgehub/api/connection</a> with <code>&quot;op&quot;: &quot;connect&quot;</code> enables the connection (since edgehub-agent 2.4.0); before, it set the connection enabled, and the device connected at its next start. A device can so hold a device credential for an EdgeHub it cannot reach yet, such as one stored on a production line and enabled on site.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
@@ -2763,31 +2810,23 @@ setting&quot; and provisioning again overwrites the setting that was kept; see
 </li>
 <li><p><strong>Request Body</strong></p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;username&quot;</span>: <span class="hljs-string">&quot;&lt;username&gt;&quot;</span>,
-    <span class="hljs-string">&quot;password&quot;</span>: <span class="hljs-string">&quot;&lt;password&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttHost&quot;</span>: <span class="hljs-string">&quot;&lt;QFDN or IP&gt;&quot;</span>,
-    <span class="hljs-string">&quot;mqttPort&quot;</span>: <span class="hljs-number">1883</span>,
-    <span class="hljs-string">&quot;enableTLS&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;overWebSocket&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;connectionString&quot;</span>: <span class="hljs-string">&quot;&lt;Azure IoT Hub Connection String&gt;&quot;</span>, <span class="hljs-comment">// optional</span>
-    <span class="hljs-string">&quot;mac&quot;</span>: <span class="hljs-string">&quot;AABBCCDDEEFF&quot;</span>, <span class="hljs-comment">// optional</span>
-    <span class="hljs-string">&quot;uuid&quot;</span>: <span class="hljs-string">&quot;123e4567-e89b-12d3-a456-426614174000&quot;</span> <span class="hljs-comment">// optional</span>
-}
-</code></pre>
-<p>or</p>
-<pre><code class="lang-json">{
-    <span class="hljs-comment">// (since edgehub-agent 1.1.0)</span>
-    <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>,
+    <span class="hljs-string">&quot;deviceTokenCredential&quot;</span>: <span class="hljs-string">&quot;&lt;base64-encoded device credential JSON&gt;&quot;</span>, <span class="hljs-comment">// optional (since edgehub-agent 2.4.0)</span>
     <span class="hljs-string">&quot;skipCertVerify&quot;</span>: <span class="hljs-literal">true</span> | <span class="hljs-literal">false</span>,
-    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...], <span class="hljs-comment">// optional</span>
+    <span class="hljs-string">&quot;caCerts&quot;</span>: [<span class="hljs-string">&quot;&lt;base64-encoded PEM&gt;&quot;</span>, ...] <span class="hljs-comment">// optional</span>
 }
 </code></pre>
+<ul>
+<li><p><code>deviceTokenCredential</code>: The device credential copied from EdgeHub, base64-encoded; it replaces the stored one. Without it, the stored device credential is kept and only <code>skipCertVerify</code> and <code>caCerts</code> change, and <code>skipCertVerify</code> must then be given.</p>
+<p>The device credential has to be for this device: for the MAC <a href="#get-edgehubapimacaddr">GET /edgehub/api/macaddr</a> returns, or for the MAC of any of its wired or wireless network adapters; on Windows an adapter whose MAC is overridden also counts by its burned-in MAC. A virtual interface, such as a bridge, a veth pair or a tunnel, is not a network adapter here. A device credential for another of its adapters, also in place of a stored one, moves the device to that MAC: GET /edgehub/api/macaddr returns it from then on, <a href="#post-edgehubapideviceregister">POST /edgehub/api/device/register</a> and automatic provisioning register under it, and the cloud device registered under the previous MAC is no longer used (since edgehub-agent 2.4.0). The device answers as that MAC once <a href="#post-edgehubapiconnection">POST /edgehub/api/connection</a> with <code>&quot;op&quot;: &quot;connect&quot;</code> connects it again. A device credential for any other MAC is refused with <code>422 Unprocessable Entity</code> and a message that starts with <code>device ID mismatch</code>.</p>
+</li>
+<li><code>skipCertVerify</code>: Skip verifying the server&apos;s certificate chain and host name.</li>
+<li><code>caCerts</code>: Extra CA certificates to trust, each a base64-encoded PEM holding certificates only. They replace the stored ones; an entry that is anything else is refused with <code>422 Unprocessable Entity</code>, and nothing is changed.</li>
+</ul>
+<p>These are the only fields accepted (since edgehub-agent 2.4.0): a body with any other field, among them the fields of the earlier format such as <code>username</code>, <code>password</code>, <code>mqttHost</code>, <code>mqttPort</code>, <code>enableTLS</code>, <code>overWebSocket</code>, <code>connectionString</code>, <code>mac</code> or <code>uuid</code>, is refused with <code>422 Unprocessable Entity</code>.</p>
 </li>
 <li><p><strong>Response <code>200 OK</code></strong></p>
-<pre><code class="lang-json">{
-    <span class="hljs-comment">// same as request body</span>
-}
-</code></pre>
+<p>The summary of the setting now stored, in the form
+<a href="#get-edgehubapiconncfg">GET /edgehub/api/conncfg</a> returns.</p>
 </li>
 <li><p><strong>Response <code>401 Unauthorized</code></strong></p>
 <pre><code class="lang-json">{
@@ -2797,7 +2836,7 @@ setting&quot; and provisioning again overwrites the setting that was kept; see
 </code></pre>
 </li>
 <li><p><strong>Response <code>404 Not Found</code></strong></p>
-<p>No available data.</p>
+<p>No <code>deviceTokenCredential</code> was given and no connection setting is stored to keep.</p>
 </li>
 <li><p><strong>Response <code>422 Unprocessable Entity</code></strong></p>
 <p>The request has been applied but got errors.</p>
@@ -2887,7 +2926,7 @@ It&apos;s will be sent to the cloud via MQTT topic <strong>Advantech/\<mac\>/upd
 </li>
 </ul>
 <h2 id="post-edgehubapidata"><code>POST</code> <strong>/edgehub/api/data</strong></h2>
-<p>Send tag data to the cloud. (since edgehub-agent 1.0.1)</p>
+<p>Send tag data to the cloud. (since edgehub-agent 1.0.1) The agent declares each tag&apos;s kind to the cloud the first time it sends the tag&apos;s name, numbers as analog, booleans as discrete and strings as text, so the first value of a new tag may be lost; on a device whose credential has no UUID, tags named <code>t</code>, <code>s</code>, <code>q</code> or <code>c</code> are not declared. A tag whose name is empty, has leading or trailing white space, contains <code>/</code> or a control character, is longer than 128 characters or is <code>MSYS_EdgeStatus</code> is not declared, so the cloud may drop its values. The agent declares at most 1500 tags, fewer when tag names are long; a new tag past that is still sent but not declared, so the cloud may drop its values.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
@@ -2955,6 +2994,7 @@ It&apos;s will be sent to the cloud via MQTT topic <strong>Advantech/\<mac\>/upd
 </ul>
 <h2 id="put-edgehubapiapphubservice"><code>PUT</code> /edgehub/api/apphub/service</h2>
 <p>Control the AppHub service status. (since edgehub-agent 1.0.1)</p>
+<p>The agent gives AppHub the device&apos;s MQTT connection while the device connection is enabled, and clears it, with the certificate and key files it gave AppHub, while the connection is disabled, also when the agent starts (since edgehub-agent 2.4.0); in EdgeBus mode, AppHub gets the EdgeBus broker&apos;s instead. The agent restarts AppHub only to apply a change to its settings, that connection or the log settings, and does not otherwise start or stop it.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
@@ -3190,7 +3230,7 @@ hardware model, retry cadence) are built into the agent.</p>
 <li><code>provider</code>: Absolute path to the <code>edgehub-bootstrap-provider</code> binary. Empty string means &quot;look up the binary on PATH&quot;.</li>
 <li><code>providerTimeout</code>: Timeout applied to the provider-binary exec (Go duration syntax, e.g. <code>&quot;10s&quot;</code>, <code>&quot;30s&quot;</code>).</li>
 <li><code>retry.maxRetries</code>: Maximum number of retry attempts per NATS command before giving up.</li>
-<li><code>tls.skipVerify</code>: Disable TLS server-certificate verification during provisioning. <strong>Dev/test only.</strong></li>
+<li><code>tls.skipVerify</code>: Disable TLS server-certificate verification during provisioning. A credential provisioned onto a device that has no connection setting also starts with <code>skipCertVerify</code> on; it stays until it is changed, and a rotated or reprovisioned credential keeps the current setting. <strong>Dev/test only.</strong></li>
 </ul>
 </li>
 <li><p><strong>Response <code>401 Unauthorized</code></strong></p>
@@ -3298,13 +3338,11 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 <h2 id="post-edgehubapiapplicationsprovision"><code>POST</code> <strong>/edgehub/api/applications/provision</strong></h2>
 <p>Register an application with the cloud under this device&apos;s identity, and return the credential the cloud issued for it. (since edgehub-agent 2.4.0)</p>
 <p>An application credential is an identity of its own, separate from the device&apos;s: it carries its own <code>devId</code> and <code>uuid</code> and <code>isApp: true</code>, and shares the device&apos;s <code>mac</code>. The agent obtains it on the device&apos;s behalf and does not keep a copy; what the caller does with it is the caller&apos;s responsibility.</p>
-<p>Provisioning is create-or-get. If the name is already registered for this device and type, the existing credential is returned rather than an error, so an application can call this on every start with the same name and receive the same credential each time. It also means that two applications which pick the same name share one identity; the agent logs a warning whenever it returns an existing registration.</p>
-<p>Applications running on the device normally obtain their credential through the EdgeHub Connect SDK rather than by calling this endpoint over HTTP.</p>
+<p>The agent serves this request only on its local channels, where it can tell which operating system account is calling: the application pipe <code>\\.\pipe\edgehub_app</code> on Windows and <code>/run/edgehub/app.sock</code> on Linux, which every local user may open, and the agent&apos;s own pipe or socket, which only administrators and SYSTEM, or root, may open. Over HTTP or HTTPS it answers <code>401 Unauthorized</code> without a login and <code>403 Forbidden</code> with one. Applications running on the device normally obtain their credential through the EdgeHub Connect SDK.</p>
+<p>Provisioning is create-or-get, and each registration belongs to one account. If the name is already registered for this device and type, the account that owns the registration receives the existing credential rather than an error, so an application can call this on every start with the same name and receive the same credential each time. The owner is the account whose request made the cloud register the application, or, for a registration the cloud already had and no account on the device owned, the first account that asked for it. A container counts as the account that runs its container engine. Any other account is refused. Two programs of one account that pick the same name share one identity; for an Application (<code>type</code> <code>3</code>) the agent logs a warning whenever it returns an existing registration. An administrator changes owners with the <a href="../cli/edgehubagent.html"><code>edgehub-agent app</code></a> command.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
-<p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
-<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
-</code></pre>
+<p>None. The agent takes the caller&apos;s account from the local channel: on Windows from the pipe client, which has to open the pipe at the <code>SECURITY_IDENTIFICATION</code> impersonation level or above, and on Linux from the socket&apos;s peer credentials.</p>
 </li>
 <li><p><strong>Request Body</strong></p>
 <pre><code class="lang-json">{
@@ -3343,10 +3381,10 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 </ul>
 <p>When <code>x509</code> is <code>0</code>, the credential&apos;s <code>x509</code> object holds only <code>ca</code>, <code>revokeUrl</code> and <code>status</code>. The certificate and key fields are absent, not empty.</p>
 </li>
-<li><p><strong>Response <code>401 Unauthorized</code></strong></p>
+<li><p><strong>Response <code>403 Forbidden</code></strong></p>
+<p>The caller may not have this application, and asking again will not change that: the registration belongs to another account on the device; a container asked for an application other than the one its labels name, or has no labels; a container reached the agent&apos;s own socket instead of <code>/run/edgehub/app.sock</code>; on Linux, the calling account has a user ID from 61184 to 65519, which can own no application because systemd gives that range to services with <code>DynamicUser=yes</code>, so the application, or the engine of its container, has to run as a user outside that range; the agent found out something about the caller that keeps it from telling which account is calling, as when a Windows program opened the pipe anonymously, or a Linux caller is in a container of a runtime the agent does not know; or the request did not come through the agent&apos;s local channels. <a href="../cli/edgehubagent.html#when-an-application-is-refused">When an application is refused</a> says what to do for each.</p>
 <pre><code class="lang-json">{
-    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-number">401</span>,
-    <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+    <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;SCADA \&quot;plant-a\&quot;: the application belongs to another account on this device&quot;</span>
 }
 </code></pre>
 </li>
@@ -3362,14 +3400,74 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 <p>The cloud answered and refused, or answered in a form the agent could not read. The message carries the cloud&apos;s reason, for example <code>APP_INVALID_X509</code>. Sending the same request again will not change the answer.</p>
 </li>
 <li><p><strong>Response <code>503 Service Unavailable</code></strong></p>
-<p>The agent could not do the work, and nothing about the request was wrong: it is not connected to the cloud yet, which is normal for a short while after it starts; it is shutting down; or the cloud never answered. Retry. Retrying is safe: provisioning is create-or-get, so a later attempt returns whatever an earlier one registered.</p>
+<p>The agent could not do the work, and nothing about the request was wrong: it is not connected to the cloud yet, which is normal for a short while after it starts; it is shutting down; it failed to identify the caller, as when the caller exited while the agent read it, and the message names what failed; its connection to the cloud changed during the request; the cloud never answered; or it cannot read or write its records of which account owns which application, or make sure a change to them reached the disk; its log names the file, and an administrator repairs or removes a file that cannot be read, and restarts the agent. Retry. Retrying is safe: provisioning is create-or-get, so a later attempt returns whatever an earlier one registered, and a registration made by a request that got no answer goes to the first account that asks for it, normally the one retrying.</p>
 </li>
 <li><p><strong>Response <code>504 Gateway Timeout</code></strong></p>
 <p>The request ran out of time before the cloud answered. The registration may or may not have been made; retrying with the same name is safe for the same reason.</p>
 </li>
 </ul>
+<h2 id="get-edgehubapiwslstatus"><code>GET</code> <strong>/edgehub/api/wsl/status</strong></h2>
+<p>Get what the agent sees of the relays through which containers in WSL 2 reach it on a Windows device: the WSL virtual machines it listens on, and the connections that came through each. (since edgehub-agent 2.4.0)</p>
+<p>A relay is installed in each WSL distribution that runs a container engine, with the <a href="../cli/edgehubagent.html"><code>edgehub-agent.exe wsl setup</code></a> command. The WSL distributions of one Windows user share one virtual machine, so this endpoint reports per virtual machine, not per distribution; to check the relay in one distribution, run <code>edgehub-agent.exe wsl status --distro &lt;name&gt;</code> on the device. The counts start from zero when the agent starts.</p>
+<ul>
+<li><p><strong>Request Headers</strong></p>
+<p><a href="authentication.html#post-authloginm">Log in</a> with the OS or the &quot;admin&quot; account to get a JWT token (<code>token</code> field from the response body).</p>
+<pre><code class="lang-html">Authorization: Bearer <span class="hljs-tag">&lt;<span class="hljs-name">token</span>&gt;</span>
+</code></pre>
+</li>
+<li><p><strong>Response <code>200 OK</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;port&quot;</span>: <span class="hljs-number">20058</span>,
+    <span class="hljs-string">&quot;listedAt&quot;</span>: <span class="hljs-string">&quot;2026-09-30T15:06:52.8747547+08:00&quot;</span>,
+    <span class="hljs-string">&quot;vms&quot;</span>: [
+        {
+            <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;9238e7c9-9f94-432c-bc96-87e5fb7169ad&quot;</span>,
+            <span class="hljs-string">&quot;listening&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;accepted&quot;</span>: <span class="hljs-number">5</span>,
+            <span class="hljs-string">&quot;keyRejected&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;badPreamble&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;capRejected&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;live&quot;</span>: <span class="hljs-number">0</span>,
+            <span class="hljs-string">&quot;lastRelay&quot;</span>: <span class="hljs-string">&quot;2026-09-30T14:48:55.5280457+08:00&quot;</span>,
+            <span class="hljs-string">&quot;relayVersion&quot;</span>: <span class="hljs-string">&quot;v2.4.0&quot;</span>
+        }
+    ]
+}
+</code></pre>
+<p>Times are in RFC 3339 format, in the device&apos;s local time.</p>
+<ul>
+<li><code>port</code>: The Hyper-V socket (vsock) port the agent listens on for each WSL virtual machine, to which the relays connect. It is not a TCP port.</li>
+<li><code>listError</code> (optional): Why the agent&apos;s last attempt to list the running WSL virtual machines failed. The listeners it already has stay open meanwhile. On a device without WSL 2 this stays set, and <code>vms</code> stays empty.</li>
+<li><code>listedAt</code> (optional): When the agent last listed the running WSL virtual machines, which it does about every 2 seconds. Absent until a listing succeeds.</li>
+<li><code>skippedOwners</code> (optional): The owners of the other Hyper-V compute systems found in the last listing, which are not WSL virtual machines and which the agent does not listen on.</li>
+<li><code>vms</code>: One entry for each running WSL virtual machine; empty when none is running.<ul>
+<li><code>id</code>: The virtual machine&apos;s ID. WSL gives the virtual machine a new ID whenever it starts it again, for example after <code>wsl --shutdown</code>, and the counts for the new ID start from zero.</li>
+<li><code>listening</code>: Whether the agent is listening on the virtual machine.</li>
+<li><code>listenError</code> (optional): Why the agent could not listen, while <code>listening</code> is <code>false</code>. The agent keeps retrying.</li>
+<li><code>accepted</code>: Connections accepted from a relay that presented a relay key the agent issued.</li>
+<li><code>keyRejected</code>: Connections refused because the relay presented no key the agent issued: one set up by an earlier agent, or one whose key the agent no longer has. Run <code>edgehub-agent.exe wsl setup</code> again for its distribution.</li>
+<li><code>badPreamble</code>: Connections refused because the relay&apos;s opening message could not be read.</li>
+<li><code>capRejected</code>: Connections refused because a limit on open connections was reached, for one container, for the virtual machine, or for the agent as a whole.</li>
+<li><code>live</code>: Connections open now.</li>
+<li><code>lastRelay</code> (optional): When the last connection was accepted. Absent until one is.</li>
+<li><code>relayVersion</code> (optional): The version of the relay that made the last accepted connection.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Response <code>404 Not Found</code></strong></p>
+<p>The agent serves no WSL relay: it is not running on Windows, or it could not load its relay key, and its log says why. An agent older than 2.4.0 answers the same.</p>
+</li>
+<li><p><strong>Response <code>401 Unauthorized</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;Code&quot;</span>: <span class="hljs-number">401</span>,
+    <span class="hljs-string">&quot;Message&quot;</span>: <span class="hljs-string">&quot;&lt;the detail error message&gt;&quot;</span>
+}
+</code></pre>
+</li>
+</ul>
 <h2 id="post-edgehubapiinitialcode"><code>POST</code> <strong>/edgehub/api/initialcode</strong></h2>
-<p>Retrieve the current initial code for device registration.</p>
+<p>Retrieve the current initial code for device registration. This endpoint exists only while LAN onboarding is on; otherwise it answers <code>404 Not Found</code>. See <a href="#initial-code-retrieval">Initial Code Retrieval</a>.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p>To access this endpoint, log in with an OS or &quot;admin&quot; account to obtain a JWT token (<code>token</code> field in the response body). Include the token in the request header.</p>
@@ -3382,17 +3480,18 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 }
 </code></pre>
 <ul>
-<li><strong>code</strong>: The current initial code for the device registration process, valid for a specific time period before regeneration.</li>
+<li><strong>code</strong>: The current initial code for the device registration process. It stays the same until the service restarts or the device loses its stored connection configuration.</li>
 </ul>
 </li>
 </ul>
 <h2 id="initial-code-retrieval">Initial Code Retrieval</h2>
-<p>The <code>initial code</code> required for device registration can be retrieved by either of the following methods:</p>
+<p>LAN onboarding, which registers a device from the local network with an <code>initial code</code>, is off by default. While it is off, the device does not advertise itself over mDNS and has no <code>initial code</code>, and <a href="#post-edgehubapiinitialcode">POST /edgehub/api/initialcode</a>, <a href="#post-edgehubapidevicechallenge">POST /edgehub/api/device/challenge</a> and <a href="#post-edgehubapideviceregister">POST /edgehub/api/device/register</a> answer <code>404 Not Found</code>. <a href="../cli/edgehubagent.html#lan-onboarding">LAN onboarding</a> tells how to turn it on.</p>
+<p>While LAN onboarding is on, the <code>initial code</code> required for device registration can be retrieved by either of the following methods:</p>
 <ol>
 <li><p><strong>mDNS Browsing</strong>:</p>
 <ul>
-<li>The <code>initial code</code> is broadcasted over the local network via mDNS under the service name <code>_edgehub._tcp.local.</code>.</li>
-<li>To retrieve the <code>initial code</code>, clients can browse the mDNS service and filter the TXT record, where the <code>code</code> field appears as <code>code=&lt;initial code&gt;</code>.</li>
+<li>The device advertises the service name <code>_edgehub._tcp.local.</code> over the local network via mDNS whether it has a stored connection configuration or not, so clients can list every device by browsing it.</li>
+<li>The <code>initial code</code> is broadcasted only while the device has no stored connection configuration. To retrieve it, clients can filter the TXT record, where the <code>code</code> field appears as <code>code=&lt;initial code&gt;</code>. A device with a stored connection configuration has no <code>code</code> field.</li>
 <li>This method is suitable for trusted internal networks where mDNS broadcasts are accessible, and it allows clients to dynamically discover the <code>initial code</code> without direct API access.</li>
 </ul>
 </li>
@@ -3404,8 +3503,9 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 </li>
 </ol>
 <p>These options allow clients flexibility in retrieving the <code>initial code</code> based on network availability and security requirements.</p>
+<p>The <code>initial code</code> unlocks one thing: registering a device that has no stored connection configuration, through <a href="#post-edgehubapidevicechallenge">POST /edgehub/api/device/challenge</a> and <a href="#post-edgehubapideviceregister">POST /edgehub/api/device/register</a>. Every other route requires a JWT token, and a client on another host that reaches the agent&apos;s own HTTPS port instead of the portal gets <code>403 Forbidden</code> on it, as <a href="../cli/edgehubagent.html#lan-onboarding">LAN onboarding</a> describes. Anyone who can hear the mDNS broadcast can register such a device, so keep a device that is not yet registered on a trusted network.</p>
 <h2 id="post-edgehubapidevicechallenge"><code>POST</code> <strong>/edgehub/api/device/challenge</strong></h2>
-<p>Initiate a device challenge by generating a <code>key</code> that authenticates the request.</p>
+<p>Initiate a device challenge by generating a <code>key</code> that authenticates the request. This endpoint exists only while LAN onboarding is on; otherwise it answers <code>404 Not Found</code>. See <a href="#initial-code-retrieval">Initial Code Retrieval</a>.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p>This request does not require JWT-based authorization, as it relies on a challenge-response authentication mechanism.</p>
@@ -3417,7 +3517,7 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 }
 </code></pre>
 <ul>
-<li><strong>clientID</strong>: A unique identifier generated by the client. This value is combined with an <code>initial code</code> (server-generated and updated periodically) to create a <code>key</code>.</li>
+<li><strong>clientID</strong>: A unique identifier generated by the client. This value is combined with an <code>initial code</code> (server-generated) to create a <code>key</code>.</li>
 <li><strong>key</strong>: A hashed value used to verify the client. The <code>key</code> is generated by combining <code>clientID</code> and <code>initial code</code> using HMAC and bcrypt.</li>
 </ul>
 </li>
@@ -3431,7 +3531,7 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 <li><strong>Convert the bcrypt result to a hex string</strong> to get the final <code>key</code>.</li>
 </ol>
 <blockquote>
-<p>Note: This approach ensures the <code>key</code> is unique and valid only while the <code>initial code</code> is active, providing secure and time-limited access to device registration.</p>
+<p>Note: This approach ensures the <code>key</code> is unique and valid only while the <code>initial code</code> is active.</p>
 </blockquote>
 <p>Example in Golang:</p>
 <pre><code class="lang-go"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">GenerateKey</span><span class="hljs-params">(initialCode, clientID <span class="hljs-keyword">string</span>)</span> <span class="hljs-params">(<span class="hljs-keyword">string</span>, error)</span></span> {
@@ -3480,7 +3580,8 @@ the <code>status</code> field transitions through <code>onboarding</code> → <c
 </ul>
 <h2 id="post-edgehubapideviceregister"><code>POST</code> <strong>/edgehub/api/device/register</strong></h2>
 <p>Complete the device registration process with <code>clientID</code>, <code>code</code>, and additional registration details.
-The device will connect to the EdgeHub once the registration process is successful.</p>
+The device will connect to the EdgeHub once the registration process is successful.
+This registers a device that has no stored connection configuration; see <code>409 Conflict</code> below. This endpoint exists only while LAN onboarding is on; otherwise it answers <code>404 Not Found</code>. See <a href="#initial-code-retrieval">Initial Code Retrieval</a>.</p>
 <ul>
 <li><p><strong>Request Headers</strong></p>
 <p>No JWT-based authorization is required for this endpoint, as it uses the challenge-response mechanism for validation.</p>
@@ -3562,6 +3663,13 @@ The device will connect to the EdgeHub once the registration process is successf
 </code></pre>
 <p>This error occurs if the <code>code</code> validation fails.</p>
 </li>
+<li><p><strong>Response <code>409 Conflict</code></strong></p>
+<pre><code class="lang-json">{
+    <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;&lt;detailed error message&gt;&quot;</span>
+}
+</code></pre>
+<p>This error occurs if the <code>code</code> is valid and the device already has a stored connection configuration, including one it keeps because it cannot use it. Nothing is sent to EdgeHub and the stored configuration is not changed. To register the device again, first remove the stored configuration with <a href="#delete-edgehubapiconncfg">DELETE /edgehub/api/conncfg</a>.</p>
+</li>
 <li><p><strong>Response <code>500 Internal Server Error</code></strong></p>
 <pre><code class="lang-json">{
     <span class="hljs-string">&quot;message&quot;</span>: <span class="hljs-string">&quot;&lt;detailed error message&gt;&quot;</span>
@@ -3597,7 +3705,7 @@ The device will connect to the EdgeHub once the registration process is successf
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"EdgeHub","level":"1.3.13","depth":2,"next":{"title":"Application Manager","level":"1.3.14","depth":2,"path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md","articles":[{"title":"GET /platform/api/appwdt","level":"1.3.14.1","depth":3,"anchor":"#get-platformapiappwdt","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdt","articles":[]},{"title":"POST /platform/api/appwdt/App","level":"1.3.14.2","depth":3,"anchor":"#post-platformapiappwdtapp","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#post-platformapiappwdtapp","articles":[]},{"title":"DELETE /platform/api/appwdt/App","level":"1.3.14.3","depth":3,"anchor":"#get-platformapiappwdtapp","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapp","articles":[]},{"title":"GET /platform/api/appwdt/APPList","level":"1.3.14.4","depth":3,"anchor":"#delete-platformapiappwdtapplist","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#delete-platformapiappwdtapplist","articles":[]},{"title":"GET /platform/api/appwdt/AppListByName/:id","level":"1.3.14.5","depth":3,"anchor":"#get-platformapiappwdtapplistbynameid","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapplistbynameid","articles":[]}]},"previous":{"title":"ETP","level":"1.3.12","depth":2,"path":"RESTApi/etp.md","ref":"RESTApi/etp.md","articles":[{"title":"GET /platform/api/etp/devicedata","level":"1.3.12.1","depth":3,"anchor":"#get-platformapietpdevicedata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpdevicedata","articles":[]},{"title":"GET /platform/api/etp/userdata","level":"1.3.12.2","depth":3,"anchor":"#get-platformapietpuserdata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpuserdata","articles":[]},{"title":"PUT /platform/api/etp/userdata","level":"1.3.12.3","depth":3,"anchor":"#put-platformapietpuserdata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdata","articles":[]},{"title":"GET /platform/api/etp/userdata/lockstatus","level":"1.3.12.4","depth":3,"anchor":"#get-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpuserdatalockstatus","articles":[]},{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.12.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]}]},"articles":[{"title":"GET /edgehub/api/ping","level":"1.3.13.1","depth":3,"anchor":"#get-edgehubapiping","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiping","articles":[]},{"title":"GET /edgehub/api/agentinfo","level":"1.3.13.2","depth":3,"anchor":"#get-edgehubapiagentinfo","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiagentinfo","articles":[]},{"title":"GET /edgehub/api/macaddr","level":"1.3.13.3","depth":3,"anchor":"#get-edgehubapimacaddr","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapimacaddr","articles":[]},{"title":"GET /edgehub/api/connection","level":"1.3.13.4","depth":3,"anchor":"#get-edgehubapiconnection","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiconnection","articles":[]},{"title":"POST /edgehub/api/connection","level":"1.3.13.5","depth":3,"anchor":"#post-edgehubapiconnection","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiconnection","articles":[]},{"title":"GET /edgehub/api/conncfg","level":"1.3.13.6","depth":3,"anchor":"#get-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiconncfg","articles":[]},{"title":"POST /edgehub/api/conncfg","level":"1.3.13.7","depth":3,"anchor":"#post-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiconncfg","articles":[]},{"title":"DELETE /edgehub/api/conncfg","level":"1.3.13.8","depth":3,"anchor":"#delete-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#delete-edgehubapiconncfg","articles":[]},{"title":"GET /edgehub/api/profile","level":"1.3.13.9","depth":3,"anchor":"#get-edgehubapiprofile","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiprofile","articles":[]},{"title":"POST /edgehub/api/data","level":"1.3.13.10","depth":3,"anchor":"#post-edgehubapidata","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapidata","articles":[]},{"title":"GET /edgehub/api/apphub/status","level":"1.3.13.11","depth":3,"anchor":"#get-edgehubapiapphubstatus","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiapphubstatus","articles":[]},{"title":"PUT /edgehub/api/apphub/service","level":"1.3.13.12","depth":3,"anchor":"#put-edgehubapiapphubservice","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiapphubservice","articles":[]},{"title":"PUT /edgehub/api/apphub/log/config","level":"1.3.13.13","depth":3,"anchor":"#put-edgehubapiapphublogconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiapphublogconfig","articles":[]},{"title":"GET /edgehub/api/edgebus/status","level":"1.3.13.14","depth":3,"anchor":"#get-edgehubapiedgebusstatus","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiedgebusstatus","articles":[]},{"title":"PUT /edgehub/api/edgebus/config","level":"1.3.13.15","depth":3,"anchor":"#put-edgehubapiedgebusconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiedgebusconfig","articles":[]},{"title":"POST /edgehub/api/pem/temp","level":"1.3.13.16","depth":3,"anchor":"#post-edgehubapipemtemp","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapipemtemp","articles":[]},{"title":"GET /edgehub/api/provisioning/config","level":"1.3.13.17","depth":3,"anchor":"#get-edgehubapiprovisioningconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiprovisioningconfig","articles":[]},{"title":"PUT /edgehub/api/provisioning/config","level":"1.3.13.18","depth":3,"anchor":"#put-edgehubapiprovisioningconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiprovisioningconfig","articles":[]},{"title":"POST /edgehub/api/provisioning/reprovision","level":"1.3.13.19","depth":3,"anchor":"#post-edgehubapiprovisioningreprovision","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiprovisioningreprovision","articles":[]},{"title":"POST /edgehub/api/applications/provision","level":"1.3.13.20","depth":3,"anchor":"#post-edgehubapiapplicationsprovision","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiapplicationsprovision","articles":[]},{"title":"POST /edgehub/api/initialcode","level":"1.3.13.21","depth":3,"anchor":"#post-edgehubapiinitialcode","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiinitialcode","articles":[]},{"title":"Initial Code Retrieval","level":"1.3.13.22","depth":3,"anchor":"#initial-code-retrieval","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#initial-code-retrieval","articles":[]},{"title":"POST /edgehub/api/device/challenge","level":"1.3.13.23","depth":3,"anchor":"#post-edgehubapidevicechallenge","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapidevicechallenge","articles":[]},{"title":"POST /edgehub/api/device/register","level":"1.3.13.24","depth":3,"anchor":"#post-edgehubapideviceregister","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapideviceregister","articles":[]}],"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.6.3","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2026 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/edgehub.md","mtime":"2026-09-18T05:57:10.652Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2026-09-18T06:04:40.349Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"EdgeHub","level":"1.3.13","depth":2,"next":{"title":"Application Manager","level":"1.3.14","depth":2,"path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md","articles":[{"title":"GET /platform/api/appwdt","level":"1.3.14.1","depth":3,"anchor":"#get-platformapiappwdt","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdt","articles":[]},{"title":"POST /platform/api/appwdt/App","level":"1.3.14.2","depth":3,"anchor":"#post-platformapiappwdtapp","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#post-platformapiappwdtapp","articles":[]},{"title":"DELETE /platform/api/appwdt/App","level":"1.3.14.3","depth":3,"anchor":"#get-platformapiappwdtapp","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapp","articles":[]},{"title":"GET /platform/api/appwdt/AppList","level":"1.3.14.4","depth":3,"anchor":"#get-platformapiappwdtapplist","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapplist","articles":[]},{"title":"GET /platform/api/appwdt/AppListByName/:id","level":"1.3.14.5","depth":3,"anchor":"#get-platformapiappwdtapplistbynameid","path":"RESTApi/appwdt.md","ref":"RESTApi/appwdt.md#get-platformapiappwdtapplistbynameid","articles":[]}]},"previous":{"title":"ETP","level":"1.3.12","depth":2,"path":"RESTApi/etp.md","ref":"RESTApi/etp.md","articles":[{"title":"GET /platform/api/etp/devicedata","level":"1.3.12.1","depth":3,"anchor":"#get-platformapietpdevicedata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpdevicedata","articles":[]},{"title":"GET /platform/api/etp/userdata","level":"1.3.12.2","depth":3,"anchor":"#get-platformapietpuserdata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpuserdata","articles":[]},{"title":"PUT /platform/api/etp/userdata","level":"1.3.12.3","depth":3,"anchor":"#put-platformapietpuserdata","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdata","articles":[]},{"title":"GET /platform/api/etp/userdata/lockstatus","level":"1.3.12.4","depth":3,"anchor":"#get-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#get-platformapietpuserdatalockstatus","articles":[]},{"title":"PUT /platform/api/etp/userdata/lockstatus","level":"1.3.12.5","depth":3,"anchor":"#put-platformapietpuserdatalockstatus","path":"RESTApi/etp.md","ref":"RESTApi/etp.md#put-platformapietpuserdatalockstatus","articles":[]}]},"articles":[{"title":"GET /edgehub/api/ping","level":"1.3.13.1","depth":3,"anchor":"#get-edgehubapiping","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiping","articles":[]},{"title":"GET /edgehub/api/agentinfo","level":"1.3.13.2","depth":3,"anchor":"#get-edgehubapiagentinfo","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiagentinfo","articles":[]},{"title":"GET /edgehub/api/macaddr","level":"1.3.13.3","depth":3,"anchor":"#get-edgehubapimacaddr","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapimacaddr","articles":[]},{"title":"GET /edgehub/api/connection","level":"1.3.13.4","depth":3,"anchor":"#get-edgehubapiconnection","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiconnection","articles":[]},{"title":"POST /edgehub/api/connection","level":"1.3.13.5","depth":3,"anchor":"#post-edgehubapiconnection","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiconnection","articles":[]},{"title":"GET /edgehub/api/conncfg","level":"1.3.13.6","depth":3,"anchor":"#get-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiconncfg","articles":[]},{"title":"POST /edgehub/api/conncfg","level":"1.3.13.7","depth":3,"anchor":"#post-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiconncfg","articles":[]},{"title":"DELETE /edgehub/api/conncfg","level":"1.3.13.8","depth":3,"anchor":"#delete-edgehubapiconncfg","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#delete-edgehubapiconncfg","articles":[]},{"title":"GET /edgehub/api/profile","level":"1.3.13.9","depth":3,"anchor":"#get-edgehubapiprofile","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiprofile","articles":[]},{"title":"POST /edgehub/api/data","level":"1.3.13.10","depth":3,"anchor":"#post-edgehubapidata","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapidata","articles":[]},{"title":"GET /edgehub/api/apphub/status","level":"1.3.13.11","depth":3,"anchor":"#get-edgehubapiapphubstatus","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiapphubstatus","articles":[]},{"title":"PUT /edgehub/api/apphub/service","level":"1.3.13.12","depth":3,"anchor":"#put-edgehubapiapphubservice","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiapphubservice","articles":[]},{"title":"PUT /edgehub/api/apphub/log/config","level":"1.3.13.13","depth":3,"anchor":"#put-edgehubapiapphublogconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiapphublogconfig","articles":[]},{"title":"GET /edgehub/api/edgebus/status","level":"1.3.13.14","depth":3,"anchor":"#get-edgehubapiedgebusstatus","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiedgebusstatus","articles":[]},{"title":"PUT /edgehub/api/edgebus/config","level":"1.3.13.15","depth":3,"anchor":"#put-edgehubapiedgebusconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiedgebusconfig","articles":[]},{"title":"POST /edgehub/api/pem/temp","level":"1.3.13.16","depth":3,"anchor":"#post-edgehubapipemtemp","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapipemtemp","articles":[]},{"title":"GET /edgehub/api/provisioning/config","level":"1.3.13.17","depth":3,"anchor":"#get-edgehubapiprovisioningconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiprovisioningconfig","articles":[]},{"title":"PUT /edgehub/api/provisioning/config","level":"1.3.13.18","depth":3,"anchor":"#put-edgehubapiprovisioningconfig","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#put-edgehubapiprovisioningconfig","articles":[]},{"title":"POST /edgehub/api/provisioning/reprovision","level":"1.3.13.19","depth":3,"anchor":"#post-edgehubapiprovisioningreprovision","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiprovisioningreprovision","articles":[]},{"title":"POST /edgehub/api/applications/provision","level":"1.3.13.20","depth":3,"anchor":"#post-edgehubapiapplicationsprovision","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiapplicationsprovision","articles":[]},{"title":"GET /edgehub/api/wsl/status","level":"1.3.13.21","depth":3,"anchor":"#get-edgehubapiwslstatus","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#get-edgehubapiwslstatus","articles":[]},{"title":"POST /edgehub/api/initialcode","level":"1.3.13.22","depth":3,"anchor":"#post-edgehubapiinitialcode","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapiinitialcode","articles":[]},{"title":"Initial Code Retrieval","level":"1.3.13.23","depth":3,"anchor":"#initial-code-retrieval","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#initial-code-retrieval","articles":[]},{"title":"POST /edgehub/api/device/challenge","level":"1.3.13.24","depth":3,"anchor":"#post-edgehubapidevicechallenge","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapidevicechallenge","articles":[]},{"title":"POST /edgehub/api/device/register","level":"1.3.13.25","depth":3,"anchor":"#post-edgehubapideviceregister","path":"RESTApi/edgehub.md","ref":"RESTApi/edgehub.md#post-edgehubapideviceregister","articles":[]}],"dir":"ltr"},"config":{"plugins":["autocover","-sharing"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"autocover":{"author":"Advantech Co., Ltd.","version":"1.6.6","font":{"size":null,"family":"Impact","color":"#424242"},"size":{"w":1800,"h":2360},"background":{"color":"#FFF"}},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"copyright":"© 2026 Advantech Co., Ltd.","theme":"default","author":"Advantech Co., Ltd.","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Advantech Edge Suite","gitbook":"*"},"file":{"path":"RESTApi/edgehub.md","mtime":"2026-11-17T03:32:42.000Z","type":"markdown"},"gitbook":{"version":"4.0.0","time":"2026-11-17T03:33:46.557Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
